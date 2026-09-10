@@ -1,0 +1,99 @@
+{
+  "document_name": "scenario_g_missing_field.pdf",
+  "document_type": "invoice",
+  "processing_status": "NOT_APPLICABLE",
+  "overall_confidence": 0.95,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "error_message": null
+  },
+  "extracted_data": {
+    "invoice_number": "INV-PARTIAL-99",
+    "invoice_date": null,
+    "due_date": null,
+    "vendor_name": "Partial Data Services",
+    "vendor_address": null,
+    "vendor_tax_id": null,
+    "customer_name": null,
+    "customer_address": null,
+    "currency": "USD",
+    "purchase_order_number": null,
+    "payment_terms": null,
+    "line_items": [],
+    "subtotal": 5000.0,
+    "tax_amount": null,
+    "tax_rate": null,
+    "discount": 0.0,
+    "shipping_amount": null,
+    "total_amount": 5500.0,
+    "cash_paid": null,
+    "change": null,
+    "field_evidence": {
+      "invoice_number": {
+        "value": "INV-PARTIAL-99",
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Invoice #: INV-PARTIAL-99",
+          "page_number": 1
+        }
+      },
+      "subtotal": {
+        "value": 5000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Subtotal: 5000.00",
+          "page_number": 1
+        }
+      },
+      "discount": {
+        "value": 0.0,
+        "confidence": 0.88,
+        "evidence": {
+          "source_text": "Subtotal: 5000.00",
+          "page_number": 1
+        }
+      },
+      "total_amount": {
+        "value": 5500.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Total Amount: 5500.00",
+          "page_number": 1
+        }
+      }
+    },
+    "additional_fields": {}
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "invoice_total_check",
+        "formula": "subtotal + tax_amount - discount",
+        "operands": {
+          "subtotal": 5000.0,
+          "tax_amount": null,
+          "discount": 0.0
+        },
+        "calculated_value": null,
+        "reported_value": 5500.0,
+        "variance": null,
+        "status": "NOT_APPLICABLE",
+        "message": "Cannot perform check: required operand(s) are null."
+      }
+    ],
+    "overall_status": "NOT_APPLICABLE",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": false,
+    "processed_at": "2026-09-10T17:27:57.896276+00:00",
+    "processing_time_ms": 2.95,
+    "page_count": 1,
+    "extracted_fields_count": 9,
+    "engine": "Gemini/OpenAI+RuleEngine"
+  }
+}

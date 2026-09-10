@@ -1,0 +1,109 @@
+{
+  "document_name": "scenario_f_validation_failure.pdf",
+  "document_type": "invoice",
+  "processing_status": "FAIL",
+  "overall_confidence": 0.98,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "error_message": null
+  },
+  "extracted_data": {
+    "invoice_number": "INV-FAIL-01",
+    "invoice_date": null,
+    "due_date": null,
+    "vendor_name": null,
+    "vendor_address": null,
+    "vendor_tax_id": null,
+    "customer_name": null,
+    "customer_address": null,
+    "currency": "USD",
+    "purchase_order_number": null,
+    "payment_terms": null,
+    "line_items": [],
+    "subtotal": 1000.0,
+    "tax_amount": 100.0,
+    "tax_rate": null,
+    "discount": 0.0,
+    "shipping_amount": null,
+    "total_amount": 2500.0,
+    "cash_paid": null,
+    "change": null,
+    "field_evidence": {
+      "invoice_number": {
+        "value": "INV-FAIL-01",
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Invoice #: INV-FAIL-01",
+          "page_number": 1
+        }
+      },
+      "subtotal": {
+        "value": 1000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Subtotal: 1000.00",
+          "page_number": 1
+        }
+      },
+      "tax_amount": {
+        "value": 100.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Tax Amount: 100.00",
+          "page_number": 1
+        }
+      },
+      "discount": {
+        "value": 0.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Discount: 0.00",
+          "page_number": 1
+        }
+      },
+      "total_amount": {
+        "value": 2500.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Total Amount: 2500.00",
+          "page_number": 1
+        }
+      }
+    },
+    "additional_fields": {}
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "invoice_total_check",
+        "formula": "subtotal + tax_amount - discount",
+        "operands": {
+          "subtotal": 1000.0,
+          "tax_amount": 100.0,
+          "discount": 0.0
+        },
+        "calculated_value": 1100.0,
+        "reported_value": 2500.0,
+        "variance": 1400.0,
+        "status": "FAIL",
+        "message": "Invoice total mismatch"
+      }
+    ],
+    "overall_status": "FAIL",
+    "issues": [
+      "Check 'invoice_total_check' FAILED: Reported 2500.0 vs Calculated 1100.0 (Variance: 1400.0)"
+    ]
+  },
+  "processing_metadata": {
+    "ocr_used": false,
+    "processed_at": "2026-09-10T17:27:57.884702+00:00",
+    "processing_time_ms": 2.38,
+    "page_count": 1,
+    "extracted_fields_count": 9,
+    "engine": "Gemini/OpenAI+RuleEngine"
+  }
+}

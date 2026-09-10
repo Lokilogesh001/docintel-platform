@@ -1,0 +1,187 @@
+{
+  "document_name": "scenario_b_balance_sheet.pdf",
+  "document_type": "balance_sheet",
+  "processing_status": "FAIL",
+  "overall_confidence": 0.98,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "error_message": null
+  },
+  "extracted_data": {
+    "statement_title": "Balance Sheet",
+    "entity_name": null,
+    "reporting_period": "As at 31 December 2024",
+    "currency": "USD",
+    "total_assets": 800000.0,
+    "total_liabilities": 500000.0,
+    "total_equity": 300000.0,
+    "total_capital_and_liabilities": 800000.0,
+    "asset_line_items": [
+      {
+        "name": "--- PAGE ---",
+        "category": null,
+        "amount": 1.0,
+        "comparative_amount": null,
+        "page_number": 1
+      },
+      {
+        "name": "As at December",
+        "category": null,
+        "amount": 2024.0,
+        "comparative_amount": null,
+        "page_number": 1
+      },
+      {
+        "name": "Cash and Cash Equivalents",
+        "category": null,
+        "amount": 250000.0,
+        "comparative_amount": null,
+        "page_number": 1
+      },
+      {
+        "name": "Accounts Receivable",
+        "category": null,
+        "amount": 150000.0,
+        "comparative_amount": null,
+        "page_number": 1
+      },
+      {
+        "name": "Property and Equipment",
+        "category": null,
+        "amount": 400000.0,
+        "comparative_amount": null,
+        "page_number": 1
+      }
+    ],
+    "liability_line_items": [
+      {
+        "name": "Current Liabilities",
+        "category": null,
+        "amount": 300000.0,
+        "comparative_amount": null,
+        "page_number": 1
+      },
+      {
+        "name": "Long Term Debt",
+        "category": null,
+        "amount": 200000.0,
+        "comparative_amount": null,
+        "page_number": 1
+      },
+      {
+        "name": "Retained Earnings",
+        "category": null,
+        "amount": 300000.0,
+        "comparative_amount": null,
+        "page_number": 1
+      }
+    ],
+    "equity_line_items": [],
+    "comparative_period": null,
+    "comparative_total_assets": null,
+    "comparative_total_liabilities": null,
+    "comparative_total_equity": null,
+    "field_evidence": {
+      "total_assets": {
+        "value": 800000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Total Assets: 800000.00",
+          "page_number": 1
+        }
+      },
+      "total_liabilities": {
+        "value": 500000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Total Liabilities: 500000.00",
+          "page_number": 1
+        }
+      },
+      "total_equity": {
+        "value": 300000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Total Equity: 300000.00",
+          "page_number": 1
+        }
+      },
+      "total_capital_and_liabilities": {
+        "value": 800000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Total Capital and Liabilities: 800000.00",
+          "page_number": 1
+        }
+      }
+    },
+    "additional_fields": {}
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "balance_sheet_equation",
+        "formula": "Total Capital & Liabilities \u2248 Total Assets",
+        "operands": {
+          "total_capital_and_liabilities": 800000.0,
+          "total_assets": 800000.0
+        },
+        "calculated_value": 800000.0,
+        "reported_value": 800000.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "message": "Balance Sheet equation holds"
+      },
+      {
+        "name": "asset_components_sum",
+        "formula": "sum(asset_components)",
+        "operands": {
+          "asset_components": [
+            1.0,
+            2024.0,
+            250000.0,
+            150000.0,
+            400000.0
+          ]
+        },
+        "calculated_value": 802025.0,
+        "reported_value": 800000.0,
+        "variance": 2025.0,
+        "status": "FAIL",
+        "message": null
+      },
+      {
+        "name": "liability_equity_components_sum",
+        "formula": "sum(capital_and_liability_components)",
+        "operands": {
+          "liability_and_equity_components": [
+            300000.0,
+            200000.0,
+            300000.0
+          ]
+        },
+        "calculated_value": 800000.0,
+        "reported_value": 800000.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "message": null
+      }
+    ],
+    "overall_status": "FAIL",
+    "issues": [
+      "Check 'asset_components_sum' FAILED: Reported 800000.0 vs Calculated 802025.0 (Variance: 2025.0)"
+    ]
+  },
+  "processing_metadata": {
+    "ocr_used": false,
+    "processed_at": "2026-09-10T17:27:41.767018+00:00",
+    "processing_time_ms": 2.91,
+    "page_count": 1,
+    "extracted_fields_count": 12,
+    "engine": "Gemini/OpenAI+RuleEngine"
+  }
+}

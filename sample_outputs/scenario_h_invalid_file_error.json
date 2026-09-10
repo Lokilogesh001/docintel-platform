@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "UNSUPPORTED_FILE_TYPE",
+    "message": "File extension '.exe' is not supported. Only PDF / JPG / PNG documents are supported."
+  }
+}

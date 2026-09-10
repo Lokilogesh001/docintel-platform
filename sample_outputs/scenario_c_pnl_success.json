@@ -1,0 +1,128 @@
+{
+  "document_name": "scenario_c_pnl.pdf",
+  "document_type": "profit_and_loss",
+  "processing_status": "PASS",
+  "overall_confidence": 0.98,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "error_message": null
+  },
+  "extracted_data": {
+    "statement_title": "Profit and Loss Statement",
+    "entity_name": null,
+    "reporting_period": null,
+    "currency": "USD",
+    "revenue": null,
+    "interest_earned": 120000.0,
+    "other_income": 30000.0,
+    "total_income": 150000.0,
+    "cost_of_sales": null,
+    "cogs": null,
+    "gross_profit": null,
+    "operating_expenses": 35000.0,
+    "interest_expended": 40000.0,
+    "provisions": 15000.0,
+    "total_expenditure": 90000.0,
+    "operating_profit": null,
+    "tax": null,
+    "net_profit_before_minority_interest": 60000.0,
+    "minority_interest": 5000.0,
+    "net_profit": 55000.0,
+    "brought_forward_profit": null,
+    "total_appropriations": null,
+    "income_line_items": [],
+    "expense_line_items": [],
+    "comparative_period": null,
+    "comparative_net_profit": null,
+    "field_evidence": {
+      "operating_expenses": {
+        "value": 35000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Operating Expenses: 35000.00",
+          "page_number": 1
+        }
+      },
+      "net_profit": {
+        "value": 55000.0,
+        "confidence": 0.98,
+        "evidence": {
+          "source_text": "Net Profit: 55000.00",
+          "page_number": 1
+        }
+      }
+    },
+    "additional_fields": {}
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "total_income_check",
+        "formula": "interest_earned + other_income",
+        "operands": {
+          "interest_earned": 120000.0,
+          "other_income": 30000.0
+        },
+        "calculated_value": 150000.0,
+        "reported_value": 150000.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "message": null
+      },
+      {
+        "name": "total_expenditure_check",
+        "formula": "interest_expended + operating_expenses + provisions",
+        "operands": {
+          "interest_expended": 40000.0,
+          "operating_expenses": 35000.0,
+          "provisions": 15000.0
+        },
+        "calculated_value": 90000.0,
+        "reported_value": 90000.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "message": null
+      },
+      {
+        "name": "net_profit_before_minority_interest_check",
+        "formula": "total_income - total_expenditure",
+        "operands": {
+          "total_income": 150000.0,
+          "total_expenditure": 90000.0
+        },
+        "calculated_value": 60000.0,
+        "reported_value": 60000.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "message": null
+      },
+      {
+        "name": "net_profit_attributable_check",
+        "formula": "profit_before_minority_interest - minority_interest",
+        "operands": {
+          "net_profit_before_minority_interest": 60000.0,
+          "minority_interest": 5000.0
+        },
+        "calculated_value": 55000.0,
+        "reported_value": 55000.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "message": null
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": false,
+    "processed_at": "2026-09-10T17:27:41.777982+00:00",
+    "processing_time_ms": 2.49,
+    "page_count": 1,
+    "extracted_fields_count": 16,
+    "engine": "Gemini/OpenAI+RuleEngine"
+  }
+}

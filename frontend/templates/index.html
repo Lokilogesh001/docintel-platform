@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocIntel AI - Intelligent Document Extraction & Validation Platform</title>
+  <meta name="description" content="AI document intelligence platform for automated financial document extraction and deterministic validation.">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">DI</div>
+      <div class="brand-text">
+        <h1>DocIntel Platform</h1>
+        <span class="brand-subtitle">AI Extraction & Deterministic Financial Validation</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <div class="health-badge" id="health-badge">
+        <span class="health-dot"></span>
+        <span id="health-text">Checking API...</span>
+      </div>
+      <a href="/docs" target="_blank" class="nav-btn" id="nav-swagger-btn">Swagger API Docs ↗</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="layout-grid">
+      
+      <!-- LEFT COLUMN: Upload & Configuration -->
+      <section class="left-col">
+        <div class="card" id="upload-card">
+          <div class="card-header">
+            <h2 class="card-title">📤 Upload Document</h2>
+          </div>
+
+          <form id="upload-form">
+            <!-- 1. Document Type Selector -->
+            <div class="form-group">
+              <label class="form-label">Select Document Category:</label>
+              <div class="doc-type-selector">
+                <label class="type-option">
+                  <input type="radio" name="doc_type" value="invoice" checked id="type-invoice">
+                  <div class="type-card">
+                    <span class="type-icon">🧾</span>
+                    <span class="type-title">Invoice</span>
+                  </div>
+                </label>
+                <label class="type-option">
+                  <input type="radio" name="doc_type" value="balance_sheet" id="type-balance-sheet">
+                  <div class="type-card">
+                    <span class="type-icon">📊</span>
+                    <span class="type-title">Balance Sheet</span>
+                  </div>
+                </label>
+                <label class="type-option">
+                  <input type="radio" name="doc_type" value="profit_and_loss" id="type-pnl">
+                  <div class="type-card">
+                    <span class="type-icon">📈</span>
+                    <span class="type-title">Profit & Loss</span>
+                  </div>
+                </label>
+                <label class="type-option">
+                  <input type="radio" name="doc_type" value="cash_flow_statement" id="type-cash-flow">
+                  <div class="type-card">
+                    <span class="type-icon">💵</span>
+                    <span class="type-title">Cash Flow</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- 2. Dropzone Upload -->
+            <div class="form-group">
+              <label class="form-label">Upload File (PDF, JPG, PNG &le; 3 pages):</label>
+              <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+              
+              <div class="dropzone" id="dropzone">
+                <div class="dropzone-icon">📄</div>
+                <div class="dropzone-text">Click or drag document here</div>
+                <div class="dropzone-subtext">Native/Scanned PDF, JPG, PNG (Max 15MB)</div>
+              </div>
+
+              <div class="file-preview" id="file-preview">
+                <div class="file-info">
+                  <span>📎</span>
+                  <span id="file-name-display">sample.pdf</span>
+                </div>
+                <button type="button" class="btn-remove-file" id="btn-remove-file" title="Remove file">&times;</button>
+              </div>
+            </div>
+
+            <div id="alert-container"></div>
+
+            <!-- 3. Process CTA Button -->
+            <button type="submit" class="btn-primary" id="btn-process" disabled>
+              <span class="spinner" id="spinner"></span>
+              <span id="btn-text">Extract & Validate Document</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Pipeline Information Card -->
+        <div class="card" style="padding: 1.25rem;">
+          <h3 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-secondary);">⚙️ Core Processing Pipeline</h3>
+          <ul style="list-style: none; font-size: 0.8rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+            <li>🛡️ <strong>File Validation:</strong> MIME, corruption, page limits (&le;3)</li>
+            <li>🔍 <strong>Text Extraction:</strong> Native PyMuPDF + OCR fallback</li>
+            <li>🤖 <strong>AI Extraction:</strong> Structured JSON & line items</li>
+            <li>⚖️ <strong>Financial Validation:</strong> Strict deterministic Python math</li>
+            <li>💾 <strong>Persistence:</strong> Stored persistently in SQLite repository</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: Inspection & Dashboard -->
+      <section class="right-col">
+        
+        <!-- Document Result Inspector Card -->
+        <div class="card" id="inspection-card">
+          <div class="card-header">
+            <h2 class="card-title">🔍 Document Result Inspector</h2>
+            <div id="res-doc-status"></div>
+          </div>
+
+          <!-- Empty State -->
+          <div id="empty-viewer" style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📑</div>
+            <p style="font-size: 0.95rem; font-weight: 500; color: var(--text-secondary);">No Document Selected</p>
+            <p style="font-size: 0.8rem; margin-top: 0.25rem;">Upload a document or select an existing record from the dashboard below to inspect.</p>
+          </div>
+
+          <!-- Active Result Viewer -->
+          <div id="result-viewer" style="display: none;">
+            <div class="result-header">
+              <div>
+                <h3 id="res-doc-name" style="font-size: 1.25rem; font-weight: 700; color: #fff;">Document Name</h3>
+                <span id="res-doc-type" style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 600;">INVOICE</span>
+              </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="result-meta-grid">
+              <div class="meta-box">
+                <div class="meta-box-label">Confidence</div>
+                <div class="meta-box-value" id="meta-confidence" style="color: var(--accent-cyan);">98%</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-box-label">Page Count</div>
+                <div class="meta-box-value" id="meta-pages">1 page</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-box-label">Duration</div>
+                <div class="meta-box-value" id="meta-time">45 ms</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-box-label">Text Strategy</div>
+                <div class="meta-box-value" id="meta-ocr">Native</div>
+              </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="tab-validation" id="tab-btn-val">Financial Validations</button>
+              <button class="tab-btn" data-tab="tab-fields" id="tab-btn-fields">Extracted Fields & Evidence</button>
+              <button class="tab-btn" data-tab="tab-tables" id="tab-btn-tables">Tables & Line Items</button>
+              <button class="tab-btn" data-tab="tab-raw-json" id="tab-btn-json">Raw JSON</button>
+            </div>
+
+            <!-- Tab 1: Financial Validations -->
+            <div class="tab-content active" id="tab-validation"></div>
+
+            <!-- Tab 2: Extracted Fields & Evidence -->
+            <div class="tab-content" id="tab-fields"></div>
+
+            <!-- Tab 3: Tables & Line Items -->
+            <div class="tab-content" id="tab-tables"></div>
+
+            <!-- Tab 4: Raw JSON -->
+            <div class="tab-content" id="tab-raw-json">
+              <div class="code-container">
+                <button class="btn-copy" id="btn-copy-json">Copy JSON</button>
+                <pre><code id="raw-json-pre"></code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dashboard Document List Card -->
+        <div class="card" id="dashboard-card">
+          <div class="card-header">
+            <h2 class="card-title">🗂️ Processed Documents Dashboard</h2>
+            <button class="nav-btn" id="btn-refresh-docs" style="cursor: pointer;">🔄 Refresh</button>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="data-table" id="doc-table">
+              <thead>
+                <tr>
+                  <th>Document Name</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Confidence</th>
+                  <th>Pages</th>
+                  <th>Processed Time</th>
+                </tr>
+              </thead>
+              <tbody id="doc-table-body">
+                <tr>
+                  <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                    Loading dashboard records...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- App Script -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
