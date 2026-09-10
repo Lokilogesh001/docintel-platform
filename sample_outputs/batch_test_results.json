@@ -1,0 +1,2880 @@
+[
+  {
+    "filename": "Consolidated Balance Sheet 2017.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 10.52,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "Consolidated Balance Sheet",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "As at March 31, 2017",
+      "currency": "INR",
+      "total_assets": 8923441607,
+      "total_liabilities": 8923441607,
+      "total_equity": 0,
+      "total_capital_and_liabilities": 8923441607,
+      "asset_line_items": [
+        {
+          "name": "Cash and balances with Reserve Bank of India",
+          "category": "Assets",
+          "amount": 379105485,
+          "comparative_amount": 300765846
+        },
+        {
+          "name": "Balances with banks and money at call and short notice",
+          "category": "Assets",
+          "amount": 114005711,
+          "comparative_amount": 89922969
+        },
+        {
+          "name": "Investments",
+          "category": "Assets",
+          "amount": 2107771120,
+          "comparative_amount": 1936338475
+        },
+        {
+          "name": "Advances",
+          "category": "Assets",
+          "amount": 5854809871,
+          "comparative_amount": 4872904174
+        },
+        {
+          "name": "Fixed assets",
+          "category": "Assets",
+          "amount": 38146997,
+          "comparative_amount": 34796976
+        },
+        {
+          "name": "Other assets",
+          "category": "Assets",
+          "amount": 429602423,
+          "comparative_amount": 387394824
+        }
+      ],
+      "liability_line_items": [
+        {
+          "name": "Capital",
+          "category": "Liabilities",
+          "amount": 5125091,
+          "comparative_amount": 5056373
+        },
+        {
+          "name": "Reserves and surplus",
+          "category": "Liabilities",
+          "amount": 912814397,
+          "comparative_amount": 737984869
+        },
+        {
+          "name": "Minority interest",
+          "category": "Liabilities",
+          "amount": 2914389,
+          "comparative_amount": 1806228
+        },
+        {
+          "name": "Deposits",
+          "category": "Liabilities",
+          "amount": 6431342479,
+          "comparative_amount": 5458732889
+        },
+        {
+          "name": "Borrowings",
+          "category": "Liabilities",
+          "amount": 984156439,
+          "comparative_amount": 1037139597
+        },
+        {
+          "name": "Other liabilities and provisions",
+          "category": "Liabilities",
+          "amount": 587088812,
+          "comparative_amount": 381403308
+        }
+      ],
+      "equity_line_items": [],
+      "comparative_period": 312016.0,
+      "comparative_total_assets": 7622123264,
+      "comparative_total_liabilities": 7622123264,
+      "comparative_total_equity": 0,
+      "additional_fields": {
+        "contingent_liabilities": 8182842892,
+        "bills_for_collection": 308480352
+      },
+      "field_evidence": {
+        "total_assets": {
+          "value": 8923441607,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t8,923,441,607\t7,622,123,264",
+            "page_number": 1
+          }
+        },
+        "total_liabilities": {
+          "value": 8923441607,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t8,923,441,607\t7,622,123,264",
+            "page_number": 1
+          }
+        },
+        "total_equity": {
+          "value": 0,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "As at March 31, 2017",
+            "page_number": 1
+          }
+        },
+        "total_capital_and_liabilities": {
+          "value": 8923441607,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t8,923,441,607\t7,622,123,264",
+            "page_number": 1
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2018.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 4.55,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "total_assets": null,
+      "total_liabilities": null,
+      "total_equity": null,
+      "total_capital_and_liabilities": null,
+      "asset_line_items": [],
+      "liability_line_items": [],
+      "equity_line_items": [],
+      "comparative_period": null,
+      "comparative_total_assets": null,
+      "comparative_total_liabilities": null,
+      "comparative_total_equity": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2019.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 5.7,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "total_assets": null,
+      "total_liabilities": null,
+      "total_equity": null,
+      "total_capital_and_liabilities": null,
+      "asset_line_items": [],
+      "liability_line_items": [],
+      "equity_line_items": [],
+      "comparative_period": null,
+      "comparative_total_assets": null,
+      "comparative_total_liabilities": null,
+      "comparative_total_equity": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2020.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 9.93,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "Consolidated Balance Sheet",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "As at March 31, 2020",
+      "currency": "INR",
+      "total_assets": 15808304373,
+      "total_liabilities": 12828057065,
+      "total_equity": 2980257308,
+      "total_capital_and_liabilities": 15808304373,
+      "asset_line_items": [
+        {
+          "name": "Cash and balances with Reserve Bank of India",
+          "category": "Assets",
+          "amount": 722110033,
+          "comparative_amount": 468045896
+        },
+        {
+          "name": "Balances with banks and money at call and short notice",
+          "category": "Assets",
+          "amount": 157291086,
+          "comparative_amount": 350130527
+        },
+        {
+          "name": "Investments",
+          "category": "Assets",
+          "amount": 3893049519,
+          "comparative_amount": 2894458722
+        },
+        {
+          "name": "Advances",
+          "category": "Assets",
+          "amount": 10436708771,
+          "comparative_amount": 8692226631
+        },
+        {
+          "name": "Fixed assets",
+          "category": "Assets",
+          "amount": 46268558,
+          "comparative_amount": 42198371
+        },
+        {
+          "name": "Other assets",
+          "category": "Assets",
+          "amount": 552876406,
+          "comparative_amount": 480996918
+        }
+      ],
+      "liability_line_items": [
+        {
+          "name": "Capital",
+          "category": "Liabilities",
+          "amount": 5483286,
+          "comparative_amount": 5446613
+        },
+        {
+          "name": "Reserves and surplus",
+          "category": "Liabilities",
+          "amount": 1758103766,
+          "comparative_amount": 1531279982
+        },
+        {
+          "name": "Minority interest",
+          "category": "Liabilities",
+          "amount": 5766413,
+          "comparative_amount": 5017945
+        },
+        {
+          "name": "Deposits",
+          "category": "Liabilities",
+          "amount": 11462071336,
+          "comparative_amount": 9225026779
+        },
+        {
+          "name": "Borrowings",
+          "category": "Liabilities",
+          "amount": 1868343231,
+          "comparative_amount": 1577327790
+        },
+        {
+          "name": "Other liabilities and provisions",
+          "category": "Liabilities",
+          "amount": 708536341,
+          "comparative_amount": 583957956
+        }
+      ],
+      "equity_line_items": [],
+      "comparative_period": 312019.0,
+      "comparative_total_assets": 12928057065,
+      "comparative_total_liabilities": 12828057065,
+      "comparative_total_equity": 0,
+      "additional_fields": {
+        "contingent_liabilities": {
+          "amount": 11304740615,
+          "comparative_amount": 10251253094
+        },
+        "bills_for_collection": {
+          "amount": 515849020,
+          "comparative_amount": 499528010
+        },
+        "report_date": "April 18, 2020"
+      },
+      "field_evidence": {
+        "total_assets": {
+          "value": 15808304373,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t15,808,304,373\t12,928,057,065",
+            "page_number": 1
+          }
+        },
+        "total_liabilities": {
+          "value": 12828057065,
+          "confidence": 0.75,
+          "evidence": {
+            "source_text": "[Extracted from document body]",
+            "page_number": 1
+          }
+        },
+        "total_equity": {
+          "value": 2980257308,
+          "confidence": 0.75,
+          "evidence": {
+            "source_text": "[Extracted from document body]",
+            "page_number": 1
+          }
+        },
+        "total_capital_and_liabilities": {
+          "value": 15808304373,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t15,808,304,373\t12,928,057,065",
+            "page_number": 1
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2021.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 4.03,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "total_assets": null,
+      "total_liabilities": null,
+      "total_equity": null,
+      "total_capital_and_liabilities": null,
+      "asset_line_items": [],
+      "liability_line_items": [],
+      "equity_line_items": [],
+      "comparative_period": null,
+      "comparative_total_assets": null,
+      "comparative_total_liabilities": null,
+      "comparative_total_equity": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2022.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 4.11,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "total_assets": null,
+      "total_liabilities": null,
+      "total_equity": null,
+      "total_capital_and_liabilities": null,
+      "asset_line_items": [],
+      "liability_line_items": [],
+      "equity_line_items": [],
+      "comparative_period": null,
+      "comparative_total_assets": null,
+      "comparative_total_liabilities": null,
+      "comparative_total_equity": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2023.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 4.1,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "total_assets": null,
+      "total_liabilities": null,
+      "total_equity": null,
+      "total_capital_and_liabilities": null,
+      "asset_line_items": [],
+      "liability_line_items": [],
+      "equity_line_items": [],
+      "comparative_period": null,
+      "comparative_total_assets": null,
+      "comparative_total_liabilities": null,
+      "comparative_total_equity": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2024.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 4.37,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "total_assets": null,
+      "total_liabilities": null,
+      "total_equity": null,
+      "total_capital_and_liabilities": null,
+      "asset_line_items": [],
+      "liability_line_items": [],
+      "equity_line_items": [],
+      "comparative_period": null,
+      "comparative_total_assets": null,
+      "comparative_total_liabilities": null,
+      "comparative_total_equity": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2025.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 11.7,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "CONSOLIDATED BALANCE SHEET",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "As at March 31, 2025",
+      "currency": "crore",
+      "total_assets": 4392417.42,
+      "total_liabilities": 4392417.42,
+      "total_equity": 0,
+      "total_capital_and_liabilities": 4392417.42,
+      "asset_line_items": [
+        {
+          "name": "Cash and balances with Reserve Bank of India",
+          "category": "Assets",
+          "amount": 144390.25,
+          "comparative_amount": 178718.67
+        },
+        {
+          "name": "Balances with banks and money at call and short notice",
+          "category": "Assets",
+          "amount": 105557.65,
+          "comparative_amount": 50115.84
+        },
+        {
+          "name": "Investments",
+          "category": "Assets",
+          "amount": 1186472.89,
+          "comparative_amount": 1005681.63
+        },
+        {
+          "name": "Advances",
+          "category": "Assets",
+          "amount": 2724938.16,
+          "comparative_amount": 2571916.65
+        },
+        {
+          "name": "Fixed assets",
+          "category": "Assets",
+          "amount": 15257.94,
+          "comparative_amount": 12603.76
+        },
+        {
+          "name": "Other assets",
+          "category": "Assets",
+          "amount": 215800.53,
+          "comparative_amount": 211157.71
+        }
+      ],
+      "liability_line_items": [
+        {
+          "name": "Capital",
+          "category": "Liabilities",
+          "amount": 765.22,
+          "comparative_amount": 759.69
+        },
+        {
+          "name": "Employees stock options outstanding",
+          "category": "Liabilities",
+          "amount": -5,
+          "comparative_amount": 3805.19
+        },
+        {
+          "name": "Reserves and surplus",
+          "category": "Liabilities",
+          "amount": 517218.98,
+          "comparative_amount": 452982.84
+        },
+        {
+          "name": "Minority interest",
+          "category": "Liabilities",
+          "amount": 16359.04,
+          "comparative_amount": 13383.4
+        },
+        {
+          "name": "Deposits",
+          "category": "Liabilities",
+          "amount": 2710898.23,
+          "comparative_amount": 2376887.28
+        },
+        {
+          "name": "Borrowings",
+          "category": "Liabilities",
+          "amount": 634605.57,
+          "comparative_amount": 730615.46
+        },
+        {
+          "name": "Other liabilities and provisions",
+          "category": "Liabilities",
+          "amount": 188163.66,
+          "comparative_amount": 174832.07
+        },
+        {
+          "name": "Policyholders' funds",
+          "category": "Liabilities",
+          "amount": 320601.53,
+          "comparative_amount": 278080.8
+        }
+      ],
+      "equity_line_items": [],
+      "comparative_period": 312024.0,
+      "comparative_total_assets": 4030194.26,
+      "comparative_total_liabilities": 4030194.26,
+      "comparative_total_equity": 0,
+      "additional_fields": {
+        "contingent_liabilities": {
+          "amount": 2709921.85,
+          "comparative_amount": 2344487.73
+        },
+        "bills_for_collection": {
+          "amount": 70679.55,
+          "comparative_amount": 65332.87
+        },
+        "report_date": "April 19, 2025"
+      },
+      "field_evidence": {
+        "total_assets": {
+          "value": 4392417.42,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t4,392,417.42\t4,030,194.26",
+            "page_number": 1
+          }
+        },
+        "total_liabilities": {
+          "value": 4392417.42,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t4,392,417.42\t4,030,194.26",
+            "page_number": 1
+          }
+        },
+        "total_equity": {
+          "value": 0,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "As at March 31, 2025",
+            "page_number": 1
+          }
+        },
+        "total_capital_and_liabilities": {
+          "value": 4392417.42,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t4,392,417.42\t4,030,194.26",
+            "page_number": 1
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Balance Sheet 2026.pdf",
+    "category": "Balance Sheet",
+    "document_type": "balance_sheet",
+    "status_code": 200,
+    "latency_sec": 10.37,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "CONSOLIDATED BALANCE SHEET",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "As at March 31, 2026",
+      "currency": "R in crore",
+      "total_assets": 4908040.84,
+      "total_liabilities": 4908040.84,
+      "total_equity": 0,
+      "total_capital_and_liabilities": 4908040.84,
+      "asset_line_items": [
+        {
+          "name": "Cash and balances with Reserve Bank of India",
+          "category": "Assets",
+          "amount": 200707.11,
+          "comparative_amount": 144390.25
+        },
+        {
+          "name": "Balances with banks and money at call and short notice",
+          "category": "Assets",
+          "amount": 111218.94,
+          "comparative_amount": 105557.65
+        },
+        {
+          "name": "Investments",
+          "category": "Assets",
+          "amount": 1280216.29,
+          "comparative_amount": 1186472.89
+        },
+        {
+          "name": "Advances",
+          "category": "Assets",
+          "amount": 3050783.23,
+          "comparative_amount": 2724938.16
+        },
+        {
+          "name": "Fixed assets",
+          "category": "Assets",
+          "amount": 16491.59,
+          "comparative_amount": 15257.94
+        },
+        {
+          "name": "Other assets",
+          "category": "Assets",
+          "amount": 248623.68,
+          "comparative_amount": 215800.53
+        }
+      ],
+      "liability_line_items": [
+        {
+          "name": "Capital",
+          "category": "Liabilities",
+          "amount": 1539.34,
+          "comparative_amount": 765.22
+        },
+        {
+          "name": "Employees stock options / units outstanding",
+          "category": "Liabilities",
+          "amount": 4545.11,
+          "comparative_amount": 3805.19
+        },
+        {
+          "name": "Reserves and surplus",
+          "category": "Liabilities",
+          "amount": 579975.02,
+          "comparative_amount": 517218.98
+        },
+        {
+          "name": "Minority interest",
+          "category": "Liabilities",
+          "amount": 22384.96,
+          "comparative_amount": 16359.04
+        },
+        {
+          "name": "Deposits",
+          "category": "Liabilities",
+          "amount": 3099638.29,
+          "comparative_amount": 2710898.23
+        },
+        {
+          "name": "Borrowings",
+          "category": "Liabilities",
+          "amount": 588484.55,
+          "comparative_amount": 634605.57
+        },
+        {
+          "name": "Other liabilities and provisions",
+          "category": "Liabilities",
+          "amount": 252977.53,
+          "comparative_amount": 188163.66
+        },
+        {
+          "name": "Policyholders' funds",
+          "category": "Liabilities",
+          "amount": 358496.04,
+          "comparative_amount": 320601.53
+        }
+      ],
+      "equity_line_items": [],
+      "comparative_period": 31202.0,
+      "comparative_total_assets": 4392417.42,
+      "comparative_total_liabilities": 4392417.42,
+      "comparative_total_equity": 0,
+      "additional_fields": {
+        "contingent_liabilities": 3479487.31,
+        "bills_for_collection": 82470.05
+      },
+      "field_evidence": {
+        "total_assets": {
+          "value": 4908040.84,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t4,908,040.84\t4,392,417.42",
+            "page_number": 1
+          }
+        },
+        "total_liabilities": {
+          "value": 4908040.84,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t4,908,040.84\t4,392,417.42",
+            "page_number": 1
+          }
+        },
+        "total_equity": {
+          "value": 0,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "As at March 31, 2026\tR in crore)",
+            "page_number": 1
+          }
+        },
+        "total_capital_and_liabilities": {
+          "value": 4908040.84,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Total\t4,908,040.84\t4,392,417.42",
+            "page_number": 1
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2017.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 14.67,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "Consolidated Cash Flow Statement",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "For the year ended March 31, 2017",
+      "currency": "in '000",
+      "operating_cash_flow": 172815931,
+      "investing_cash_flow": -11476802,
+      "financing_cash_flow": -58929743,
+      "fx_adjustment": -282622,
+      "net_change_in_cash": 102422381,
+      "opening_cash": 390688815,
+      "cash_acquired_adjustments": 295617,
+      "closing_cash": 493111196,
+      "operating_activities": [
+        {
+          "name": "Consolidated profit before income tax",
+          "amount": 233311478,
+          "comparative_amount": 194949948
+        },
+        {
+          "name": "Depreciation on fixed assets",
+          "amount": 8861876,
+          "comparative_amount": 7380326
+        },
+        {
+          "name": "(Profit) / loss on revaluation of investments",
+          "amount": -87543,
+          "comparative_amount": 173689
+        },
+        {
+          "name": "Amortisation of premia on held to maturity investments",
+          "amount": 1756569,
+          "comparative_amount": 1002801
+        },
+        {
+          "name": "(Profit) / loss on sale of fixed assets",
+          "amount": 16229,
+          "comparative_amount": 1185
+        },
+        {
+          "name": "Provision / charge for non performing assets",
+          "amount": 37024296,
+          "comparative_amount": 25179864
+        },
+        {
+          "name": "Provision for dimunition in value of Investments",
+          "amount": -76417,
+          "comparative_amount": 146543
+        },
+        {
+          "name": "Floating provisions",
+          "amount": 250000,
+          "comparative_amount": 1150000
+        },
+        {
+          "name": "Provision for standard assets",
+          "amount": 4312322,
+          "comparative_amount": 4648890
+        },
+        {
+          "name": "Contingency provisions",
+          "amount": 388440,
+          "comparative_amount": 218602
+        },
+        {
+          "name": "Share in current year's profits of associates",
+          "amount": -23393,
+          "comparative_amount": -37278
+        },
+        {
+          "name": "Direct taxes paid (net of refunds)",
+          "amount": -76847189,
+          "comparative_amount": -70730944
+        }
+      ],
+      "investing_activities": [
+        {
+          "name": "Purchase of fixed assets",
+          "amount": -11577570,
+          "comparative_amount": -8771635
+        },
+        {
+          "name": "Proceeds from sale of fixed assets",
+          "amount": 100768,
+          "comparative_amount": 116125
+        }
+      ],
+      "financing_activities": [
+        {
+          "name": "Increase in minority interest",
+          "amount": 818605,
+          "comparative_amount": 189954
+        },
+        {
+          "name": "Money received on exercise of stock options by employees",
+          "amount": 22615161,
+          "comparative_amount": 12229008
+        },
+        {
+          "name": "Increase / (decrease) in borrowings (excluding subordinate debt)",
+          "amount": -33898658,
+          "comparative_amount": 402081134
+        },
+        {
+          "name": "Redemption of subordinated debt",
+          "amount": -19084500,
+          "comparative_amount": -12020000
+        },
+        {
+          "name": "Dividend paid during the year",
+          "amount": -24083093,
+          "comparative_amount": -20091666
+        },
+        {
+          "name": "Tax on dividend",
+          "amount": -5297258,
+          "comparative_amount": -4237089
+        }
+      ],
+      "comparative_period": 3116.0,
+      "comparative_net_change_in_cash": 25424601,
+      "additional_fields": {},
+      "field_evidence": {
+        "operating_cash_flow": {
+          "value": 172815931,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow (used in) / from operating activities\t172,815,931\t(344,353,663)",
+            "page_number": 1
+          }
+        },
+        "investing_cash_flow": {
+          "value": -11476802,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash used in investing activities\t(11,476,802)\t(8,655,510)",
+            "page_number": 1
+          }
+        },
+        "financing_cash_flow": {
+          "value": -58929743,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash generated from financing activities\t(58,929,743)\t378,151,341",
+            "page_number": 2
+          }
+        },
+        "net_change_in_cash": {
+          "value": 102422381,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Net increase / (decrease) in cash and cash equivalents\t102,422,381\t25,424,601",
+            "page_number": 2
+          }
+        },
+        "opening_cash": {
+          "value": 390688815,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at April 1st (Schedules 6 and 7)\t390,688,815\t365,264,214",
+            "page_number": 2
+          }
+        },
+        "closing_cash": {
+          "value": 493111196,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at March 31st (Schedules 6 and 7)\t493,111,196\t390,688,815",
+            "page_number": 2
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2018.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 11.58,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "operating_cash_flow": null,
+      "investing_cash_flow": null,
+      "financing_cash_flow": null,
+      "fx_adjustment": null,
+      "net_change_in_cash": null,
+      "opening_cash": null,
+      "cash_acquired_adjustments": null,
+      "closing_cash": null,
+      "operating_activities": [],
+      "investing_activities": [],
+      "financing_activities": [],
+      "comparative_period": null,
+      "comparative_net_change_in_cash": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2019.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 15.81,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "CONSOLIDATED CASH FLOW STATEMENT",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "For the year ended March 31, 2019",
+      "currency": "in '000",
+      "operating_cash_flow": -628715447,
+      "investing_cash_flow": -15984087,
+      "financing_cash_flow": 231306932,
+      "fx_adjustment": 953463,
+      "net_change_in_cash": -412439139,
+      "opening_cash": 1230615562,
+      "cash_acquired_adjustments": null,
+      "closing_cash": 818176423,
+      "operating_activities": [
+        {
+          "name": "Consolidated profit before income tax",
+          "amount": 342049793,
+          "comparative_amount": 284131068
+        },
+        {
+          "name": "Depreciation on fixed assets",
+          "amount": 12206675,
+          "comparative_amount": 9667819
+        },
+        {
+          "name": "(Profit) / loss on revaluation of investments",
+          "amount": 152437,
+          "comparative_amount": 1570448
+        },
+        {
+          "name": "Amortisation of premia on held to maturity investments",
+          "amount": 4534626,
+          "comparative_amount": 3599102
+        },
+        {
+          "name": "(Profit) / loss on sale of fixed assets",
+          "amount": -62054,
+          "comparative_amount": 11833
+        },
+        {
+          "name": "Provision / charge for non performing assets",
+          "amount": 74186708,
+          "comparative_amount": 57553339
+        },
+        {
+          "name": "Provision for dimunition in value of investments",
+          "amount": 47066,
+          "comparative_amount": 308075
+        },
+        {
+          "name": "Provision for standard assets",
+          "amount": 6861413,
+          "comparative_amount": 6575746
+        },
+        {
+          "name": "Contingency provisions",
+          "amount": 4991092,
+          "comparative_amount": 3961191
+        },
+        {
+          "name": "Share in current year's profits of associates",
+          "amount": -5221,
+          "comparative_amount": null
+        },
+        {
+          "name": "(Increase) / decrease in investments (excluding investments in subsidiaries)",
+          "amount": -489301670,
+          "comparative_amount": -282310524
+        },
+        {
+          "name": "(Increase) / decrease in advances",
+          "amount": -1766074976,
+          "comparative_amount": -1203053719
+        },
+        {
+          "name": "Increase / (decrease) in deposits",
+          "amount": 1341275360,
+          "comparative_amount": 1452408940
+        },
+        {
+          "name": "(Increase) / decrease in other assets",
+          "amount": -122449924,
+          "comparative_amount": 52336433
+        },
+        {
+          "name": "Increase / (decrease) in other liabilities and provisions",
+          "amount": 87851107,
+          "comparative_amount": -114511772
+        },
+        {
+          "name": "Direct taxes paid (net of refunds)",
+          "amount": -124983100,
+          "comparative_amount": -100098994
+        }
+      ],
+      "investing_activities": [
+        {
+          "name": "Purchase of fixed assets",
+          "amount": -16206124,
+          "comparative_amount": -8477746
+        },
+        {
+          "name": "Proceeds from sale of fixed assets",
+          "amount": 222037,
+          "comparative_amount": 99204
+        },
+        {
+          "name": "Investment in subsidiaries and / or joint ventures",
+          "amount": -143331,
+          "comparative_amount": null
+        }
+      ],
+      "financing_activities": [
+        {
+          "name": "Increase in minority interest",
+          "amount": 1454623,
+          "comparative_amount": 666553
+        },
+        {
+          "name": "Proceeds from issue of equity shares under preferential allotment",
+          "amount": 84999999,
+          "comparative_amount": null
+        },
+        {
+          "name": "Proceeds from issue of shares under Qualified Institutions Placement and American Depository Receipt offering (net of issue expenses)",
+          "amount": 150896153,
+          "comparative_amount": null
+        },
+        {
+          "name": "Money received on exercise of stock options by employees",
+          "amount": 22008150,
+          "comparative_amount": 27259098
+        },
+        {
+          "name": "Increase / (decrease) in borrowings (excluding subordinate debt, perpetual debt and upper Tier Il instruments)",
+          "amount": 32656942,
+          "comparative_amount": 498214409
+        },
+        {
+          "name": "Proceeds from issue of Additional Tier I and Tier II Capital Bonds",
+          "amount": 9000000,
+          "comparative_amount": 102800000
+        },
+        {
+          "name": "Redemption of subordinated debt",
+          "amount": -28750000,
+          "comparative_amount": -20750000
+        },
+        {
+          "name": "Dividend paid during the year",
+          "amount": -33842896,
+          "comparative_amount": -28312716
+        },
+        {
+          "name": "Tax on dividend paid during the year",
+          "amount": -7116039,
+          "comparative_amount": -6100741
+        }
+      ],
+      "comparative_period": 312018.0,
+      "comparative_net_change_in_cash": 737504366,
+      "additional_fields": {
+        "report_date": "April 20, 2019",
+        "auditor": "S. R. BATLIBOI & CO. LLP"
+      },
+      "field_evidence": {
+        "operating_cash_flow": {
+          "value": -628715447,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow (used in) / from operating activities\t(628,715,447)\t172,143,764",
+            "page_number": 1
+          }
+        },
+        "investing_cash_flow": {
+          "value": -15984087,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow used in investing activities\t(15,984,087)\t(8,521,873)",
+            "page_number": 1
+          }
+        },
+        "financing_cash_flow": {
+          "value": 231306932,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow from financing activities\t231,306,932\t573,776,603",
+            "page_number": 2
+          }
+        },
+        "net_change_in_cash": {
+          "value": -412439139,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Net increase / (decrease in cash and cash equivalents\t(412,439,139)\t737,504,366",
+            "page_number": 2
+          }
+        },
+        "opening_cash": {
+          "value": 1230615562,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at April 1st, 2018\t1,230,615,562\t493,111,196",
+            "page_number": 2
+          }
+        },
+        "closing_cash": {
+          "value": 818176423,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at March 31st, 2019\t818,176,423\t1,230,615,562",
+            "page_number": 2
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2020.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 15.36,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "Consolidated Cash Flow Statement",
+      "entity_name": "HDFC Bank Limited",
+      "reporting_period": "For the year ended March 31, 2020",
+      "currency": "R in 000",
+      "operating_cash_flow": -168690920,
+      "investing_cash_flow": -16169244,
+      "financing_cash_flow": 243944969,
+      "fx_adjustment": 2139891,
+      "net_change_in_cash": 61224696,
+      "opening_cash": 818176423,
+      "cash_acquired_adjustments": null,
+      "closing_cash": 879401119,
+      "operating_activities": [
+        {
+          "name": "Consolidated profit before income tax",
+          "amount": 381525366,
+          "comparative_amount": 342049793
+        },
+        {
+          "name": "Depreciation on fixed assets",
+          "amount": 12767714,
+          "comparative_amount": 12206675
+        },
+        {
+          "name": "(Profit) / loss on revaluation of investments",
+          "amount": 7021095,
+          "comparative_amount": 152437
+        },
+        {
+          "name": "Amortisation of premium on held to maturity investments",
+          "amount": 5014137,
+          "comparative_amount": 4534626
+        },
+        {
+          "name": "(Profit) / loss on sale of fixed assets",
+          "amount": 81865,
+          "comparative_amount": -62054
+        },
+        {
+          "name": "Provision / charge for non performing assets",
+          "amount": 110657129,
+          "comparative_amount": 74233774
+        },
+        {
+          "name": "Provision for standard assets and Contingencies",
+          "amount": 30574317,
+          "comparative_amount": 11852505
+        },
+        {
+          "name": "(Increase) / decrease in investments",
+          "amount": -1010700996,
+          "comparative_amount": -514583611
+        },
+        {
+          "name": "(Increase) / decrease in advances",
+          "amount": -1855003617,
+          "comparative_amount": -1766074976
+        },
+        {
+          "name": "Increase / (decrease) in deposits",
+          "amount": 2237044557,
+          "comparative_amount": 1341275360
+        },
+        {
+          "name": "(Increase) / decrease in other assets",
+          "amount": -72497457,
+          "comparative_amount": -97167983
+        },
+        {
+          "name": "Increase / (decrease) in other liabilities and provisions",
+          "amount": 93598719,
+          "comparative_amount": 87851107
+        },
+        {
+          "name": "Direct taxes paid (net of refunds)",
+          "amount": -108773749,
+          "comparative_amount": -124983100
+        }
+      ],
+      "investing_activities": [
+        {
+          "name": "Purchase of fixed assets",
+          "amount": -16358706,
+          "comparative_amount": -16206124
+        },
+        {
+          "name": "Proceeds from sale of fixed assets",
+          "amount": 189462,
+          "comparative_amount": 222037
+        }
+      ],
+      "financing_activities": [
+        {
+          "name": "Increase in minority interest",
+          "amount": 748468,
+          "comparative_amount": 1454623
+        },
+        {
+          "name": "Proceeds from issue of share capital, net of issue expenses",
+          "amount": 18486821,
+          "comparative_amount": 257904302
+        },
+        {
+          "name": "Proceeds from issue of Tier I and Tier II capital bonds",
+          "amount": 7435000,
+          "comparative_amount": 9000000
+        },
+        {
+          "name": "Redemption of Tier I| capital bonds",
+          "amount": 0,
+          "comparative_amount": -28750000
+        },
+        {
+          "name": "Increase / (decrease) in other borrowings",
+          "amount": 283580441,
+          "comparative_amount": 32656942
+        },
+        {
+          "name": "Dividend paid during the year (including tax on dividend)",
+          "amount": -66305761,
+          "comparative_amount": -40958935
+        }
+      ],
+      "comparative_period": 312019.0,
+      "comparative_net_change_in_cash": -412439139,
+      "additional_fields": {},
+      "field_evidence": {
+        "operating_cash_flow": {
+          "value": -168690920,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow used in operating activities\t(168,690,920)\t(628,715,447)",
+            "page_number": 1
+          }
+        },
+        "investing_cash_flow": {
+          "value": -16169244,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow used in investing activities\t(16,169,244)\t(15,984,087)",
+            "page_number": 1
+          }
+        },
+        "financing_cash_flow": {
+          "value": 243944969,
+          "confidence": 0.98,
+          "evidence": {
+            "source_text": "Net cash flow from financing activities\t243,944,969\t231,306,932",
+            "page_number": 2
+          }
+        },
+        "net_change_in_cash": {
+          "value": 61224696,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Net increase / (decrease) in cash and cash equivalents\t61,224,696\t(412,439,139)",
+            "page_number": 2
+          }
+        },
+        "opening_cash": {
+          "value": 818176423,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at April 1st\t818,176,423\t1,230,615,562",
+            "page_number": 2
+          }
+        },
+        "closing_cash": {
+          "value": 879401119,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at March 31st\t879,401,119\t818,176,423",
+            "page_number": 2
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2021.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 4.63,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "operating_cash_flow": null,
+      "investing_cash_flow": null,
+      "financing_cash_flow": null,
+      "fx_adjustment": null,
+      "net_change_in_cash": null,
+      "opening_cash": null,
+      "cash_acquired_adjustments": null,
+      "closing_cash": null,
+      "operating_activities": [],
+      "investing_activities": [],
+      "financing_activities": [],
+      "comparative_period": null,
+      "comparative_net_change_in_cash": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2022.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 8.32,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": "Consolidated Cash Flow Statement",
+      "entity_name": null,
+      "reporting_period": "For the year ended March 31, 2022",
+      "currency": "crore",
+      "operating_cash_flow": -11959.57,
+      "investing_cash_flow": -2216.33,
+      "financing_cash_flow": 48124.02,
+      "fx_adjustment": 165.1,
+      "net_change_in_cash": 34113.22,
+      "opening_cash": 121272.51,
+      "cash_acquired_adjustments": null,
+      "closing_cash": 155385.73,
+      "operating_activities": [
+        {
+          "name": "Consolidated profit before income tax",
+          "amount": 50775.24,
+          "comparative_amount": 42772.58
+        },
+        {
+          "name": "Depreciation on fixed assets",
+          "amount": 1680.73,
+          "comparative_amount": 1385.01
+        },
+        {
+          "name": "(Profit) / loss on revaluation of investments",
+          "amount": -1546.4,
+          "comparative_amount": 1485.32
+        },
+        {
+          "name": "Amortisation of premium on held to maturity investments",
+          "amount": 821.32,
+          "comparative_amount": 765.47
+        },
+        {
+          "name": "(Profit) / loss on sale of fixed assets",
+          "amount": 3.25,
+          "comparative_amount": 0.29
+        },
+        {
+          "name": "Provision / charge for non performing assets",
+          "amount": 13286.95,
+          "comparative_amount": 13927.01
+        },
+        {
+          "name": "Provision for standard assets and contingencies",
+          "amount": 5418.21,
+          "comparative_amount": 5283.07
+        },
+        {
+          "name": "Employee Stock Options Expense",
+          "amount": 341.24,
+          "comparative_amount": null
+        },
+        {
+          "name": "Increase in investments",
+          "amount": -10849.22,
+          "comparative_amount": -50156.64
+        },
+        {
+          "name": "Increase in advances",
+          "amount": -248946.13,
+          "comparative_amount": -155681.07
+        },
+        {
+          "name": "Increase in deposits",
+          "amount": 224282.15,
+          "comparative_amount": 187513.74
+        },
+        {
+          "name": "(Increase) / decrease in other assets",
+          "amount": -40044.7,
+          "comparative_amount": 8307.68
+        },
+        {
+          "name": "Increase / (decrease) in other liabilities and provisions",
+          "amount": 7655.94,
+          "comparative_amount": -104.56
+        },
+        {
+          "name": "Direct taxes paid (net of refunds)",
+          "amount": -14838.16,
+          "comparative_amount": -13021.45
+        }
+      ],
+      "investing_activities": [
+        {
+          "name": "Purchase of fixed assets",
+          "amount": -2236.24,
+          "comparative_amount": -1696.15
+        },
+        {
+          "name": "Proceeds from sale of fixed assets",
+          "amount": 19.91,
+          "comparative_amount": 15.28
+        }
+      ],
+      "financing_activities": [
+        {
+          "name": "Increase in minority interest",
+          "amount": 135.83,
+          "comparative_amount": 56.12
+        },
+        {
+          "name": "Proceeds from issue of share capital, net of issue expenses",
+          "amount": 2609.76,
+          "comparative_amount": 1760.1
+        },
+        {
+          "name": "Proceeds from issue of Additional Tier I and Tier II capital bonds",
+          "amount": 8312.75,
+          "comparative_amount": 356.5
+        },
+        {
+          "name": "Redemption of Tier II capital bonds",
+          "amount": -3650.0,
+          "comparative_amount": -1105.0
+        },
+        {
+          "name": "Net proceeds / (repayments) in other borrowings",
+          "amount": 44308.08,
+          "comparative_amount": -8389.07
+        },
+        {
+          "name": "Dividend paid during the year",
+          "amount": -3592.4,
+          "comparative_amount": null
+        }
+      ],
+      "comparative_period": 312021.0,
+      "comparative_net_change_in_cash": 33332.4,
+      "additional_fields": {
+        "ICAI_Firm_Registration_Number_1": "105047W",
+        "ICAI_Firm_Registration_Number_2": "107122W/W100672",
+        "Date": "April 16, 2022"
+      },
+      "field_evidence": {
+        "operating_cash_flow": {
+          "value": -11959.57,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "(11,959.57)",
+            "page_number": 1
+          }
+        },
+        "investing_cash_flow": {
+          "value": -2216.33,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "(2,216.33)",
+            "page_number": 1
+          }
+        },
+        "financing_cash_flow": {
+          "value": 48124.02,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "48,124.02",
+            "page_number": 1
+          }
+        },
+        "net_change_in_cash": {
+          "value": 34113.22,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "34,113.22",
+            "page_number": 1
+          }
+        },
+        "opening_cash": {
+          "value": 121272.51,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "121,272.51",
+            "page_number": 1
+          }
+        },
+        "closing_cash": {
+          "value": 155385.73,
+          "confidence": 0.88,
+          "evidence": {
+            "source_text": "155,385.73",
+            "page_number": 1
+          }
+        }
+      }
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2023.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 4.53,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "operating_cash_flow": null,
+      "investing_cash_flow": null,
+      "financing_cash_flow": null,
+      "fx_adjustment": null,
+      "net_change_in_cash": null,
+      "opening_cash": null,
+      "cash_acquired_adjustments": null,
+      "closing_cash": null,
+      "operating_activities": [],
+      "investing_activities": [],
+      "financing_activities": [],
+      "comparative_period": null,
+      "comparative_net_change_in_cash": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2024.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 6.43,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "operating_cash_flow": null,
+      "investing_cash_flow": null,
+      "financing_cash_flow": null,
+      "fx_adjustment": null,
+      "net_change_in_cash": null,
+      "opening_cash": null,
+      "cash_acquired_adjustments": null,
+      "closing_cash": null,
+      "operating_activities": [],
+      "investing_activities": [],
+      "financing_activities": [],
+      "comparative_period": null,
+      "comparative_net_change_in_cash": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2025.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 6.46,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "operating_cash_flow": null,
+      "investing_cash_flow": null,
+      "financing_cash_flow": null,
+      "fx_adjustment": null,
+      "net_change_in_cash": null,
+      "opening_cash": null,
+      "cash_acquired_adjustments": null,
+      "closing_cash": null,
+      "operating_activities": [],
+      "investing_activities": [],
+      "financing_activities": [],
+      "comparative_period": null,
+      "comparative_net_change_in_cash": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Cash Flow Statement 2026.pdf",
+    "category": "Cash Flows",
+    "document_type": "cash_flow_statement",
+    "status_code": 200,
+    "latency_sec": 15.99,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "operating_cash_flow": null,
+      "investing_cash_flow": null,
+      "financing_cash_flow": null,
+      "fx_adjustment": null,
+      "net_change_in_cash": null,
+      "opening_cash": null,
+      "cash_acquired_adjustments": null,
+      "closing_cash": null,
+      "operating_activities": [],
+      "investing_activities": [],
+      "financing_activities": [],
+      "comparative_period": null,
+      "comparative_net_change_in_cash": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "20251118_000612.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 13.67,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "batch1-1109.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 3.84,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "batch2-0499.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.3,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "batch2-0999.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.44,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "batch3-1354.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.03,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "batch3-1445.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.25,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "batch3-1495.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 46.21,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X00016469619.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 46.13,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51005361895.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 46.73,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51005663293.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 46.52,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51005719883.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.76,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51005757342.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.12,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51005806685.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.12,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51006328913.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 3.72,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51006334741.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.19,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51006387931.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.18,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51008099043.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.17,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51008099071.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.2,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51008142038.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 5.24,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "X51008145450.jpg",
+    "category": "Invoices",
+    "document_type": "invoice",
+    "status_code": 200,
+    "latency_sec": 4.03,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "vendor_name": null,
+      "vendor_address": null,
+      "vendor_tax_id": null,
+      "customer_name": null,
+      "customer_address": null,
+      "currency": null,
+      "purchase_order_number": null,
+      "payment_terms": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax_amount": null,
+      "tax_rate": null,
+      "discount": null,
+      "shipping_amount": null,
+      "total_amount": null,
+      "cash_paid": null,
+      "change": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2017.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.72,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2018.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 5.24,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2019.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.75,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2020.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 5.08,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2021.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 5.44,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2022.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.75,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2023.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.25,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2024.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.52,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2025.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.29,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  },
+  {
+    "filename": "Consolidated Profit & Loss 2026.pdf",
+    "category": "Profit & Loss",
+    "document_type": "profit_and_loss",
+    "status_code": 200,
+    "latency_sec": 4.08,
+    "is_valid": false,
+    "validation_score": 0.0,
+    "extracted_data": {
+      "statement_title": null,
+      "entity_name": null,
+      "reporting_period": null,
+      "currency": null,
+      "revenue": null,
+      "interest_earned": null,
+      "other_income": null,
+      "total_income": null,
+      "cost_of_sales": null,
+      "cogs": null,
+      "gross_profit": null,
+      "operating_expenses": null,
+      "interest_expended": null,
+      "provisions": null,
+      "total_expenditure": null,
+      "operating_profit": null,
+      "tax": null,
+      "net_profit_before_minority_interest": null,
+      "minority_interest": null,
+      "net_profit": null,
+      "brought_forward_profit": null,
+      "total_appropriations": null,
+      "income_line_items": [],
+      "expense_line_items": [],
+      "comparative_period": null,
+      "comparative_net_profit": null,
+      "field_evidence": {},
+      "additional_fields": {}
+    },
+    "rule_breakdown": [],
+    "error": null
+  }
+]

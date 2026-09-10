@@ -326,12 +326,16 @@ $$\text{Variance} = |\text{Calculated Value} - \text{Reported Value}|$$
 ---
 
 ## 16. Database & Persistence Approach
-- **Engine:** SQLite using SQLAlchemy 2.0 with connection pooling.
+### Database Decision (Assessment Audit)
+- **Classification:** `docintel.db` is classified as a **generated runtime database** and local development artifact. It is intentionally excluded from Git version control via `.gitignore` to prevent committing ephemeral runtime state or sensitive processed data to public repositories.
+- **Production Persistence Strategy:**
+  - The application uses **SQLAlchemy 2.0 ORM** with automated schema migration/initialization via `init_db()` in `backend/app/main.py` lifespan events on startup.
+  - On platforms with persistent disk storage (e.g. Docker volumes, Render disks, Railway volumes), the SQLite database file persists continuously across restarts.
+  - For stateless cloud containers, setting `DATABASE_URL=postgresql://user:password@host:port/dbname` enables managed PostgreSQL persistence with zero code changes, as all document schemas store structured JSON payloads in dialect-neutral `Text` columns.
 - **Repository Abstraction:** `DocumentRepository` centralizes all data access:
   - `create_or_append()`: Persists document execution results.
-  - `get_latest_by_name()`: Ensures that processing a document with the same name returns the most recent execution record.
-  - `list_documents()`: Powers the dashboard history table with fast index scans.
-- **Data Portability:** Structured data and validation checks are stored as JSON text, making the schema 100% portable to PostgreSQL.
+  - `get_latest_by_name()`: Ensures that re-processing a document with the same name returns the newest execution record while preserving historical version records.
+  - `list_documents()`: Powers the dashboard history table with fast indexed queries.
 
 ---
 
