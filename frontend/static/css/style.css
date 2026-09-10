@@ -1,17 +1,23 @@
 /* ==========================================================================
-   DocIntel AI - Bright Modern Enterprise SaaS Design System
+   DocIntel AI - Soft Bright Premium Theme
    ========================================================================== */
 
 :root {
-  /* Color Palette - Bright Modern SaaS */
-  --bg-app: #F7F9FC;
+  /* Color Palette - Soft Cool Premium */
+  --bg-app: #F1F5FB;
+  --bg-app-gradient: linear-gradient(180deg, #F4F7FC 0%, #F1F5FB 50%, #EEF2FF 100%);
+  --bg-sidebar: #E8EEF8;
+  --bg-sidebar-gradient: linear-gradient(180deg, #E9EFF9 0%, #EEF2FF 100%);
   --bg-card: #FFFFFF;
-  --bg-subtle: #F1F4F9;
-  --bg-hover: #F8FAFC;
+  --bg-subtle: #F8FAFD;
+  --bg-hover: #F6F8FC;
   
-  --border-light: #E5E7EB;
-  --border-subtle: #DDE3EA;
+  /* Borders */
+  --border-light: #E5EAF2;
+  --border-card: #DDE5F0;
+  --border-subtle: #D2DCEB;
   --border-focus: #6366F1;
+  --border-dropzone: #B9C7DD;
   
   /* Primary & Accents */
   --primary: #4F46E5;
@@ -22,7 +28,7 @@
   --accent-purple-light: #F5F3FF;
   --accent-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
   
-  /* Status Colors */
+  /* Status Colors (Soft Pastel Backgrounds) */
   --success: #16A34A;
   --success-bg: #DCFCE7;
   --success-text: #15803D;
@@ -42,18 +48,18 @@
   --info-bg: #EFF6FF;
   --info-text: #1D4ED8;
   
-  /* Text Colors */
+  /* Text Colors (High Contrast, Accessible, No Pure Black) */
   --text-main: #111827;
   --text-secondary: #4B5563;
   --text-muted: #6B7280;
   --text-light: #9CA3AF;
   
-  /* Shadows */
-  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-  --shadow-sm: 0 1px 3px 0 rgba(16, 24, 40, 0.06), 0 1px 2px 0 rgba(16, 24, 40, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(16, 24, 40, 0.08), 0 4px 6px -4px rgba(16, 24, 40, 0.03);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+  /* Premium Soft Floating Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(50, 70, 120, 0.04);
+  --shadow-sm: 0 2px 6px 0 rgba(50, 70, 120, 0.06);
+  --shadow-card: 0 4px 20px rgba(50, 70, 120, 0.08);
+  --shadow-card-hover: 0 8px 25px rgba(50, 70, 120, 0.12);
+  --shadow-primary: 0 4px 14px rgba(79, 70, 229, 0.28);
   
   /* Typography & Radius */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -78,7 +84,8 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-app);
+  background: var(--bg-app-gradient);
+  background-attachment: fixed;
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
@@ -105,11 +112,11 @@ button, input {
   min-height: 100vh;
 }
 
-/* Left Sidebar */
+/* Left Sidebar - Soft Tinted Separation */
 .sidebar {
   width: var(--sidebar-width);
-  background-color: var(--bg-card);
-  border-right: 1px solid var(--border-light);
+  background: var(--bg-sidebar-gradient);
+  border-right: 1px solid var(--border-card);
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -140,7 +147,7 @@ button, input {
   font-weight: 800;
   font-size: 1.25rem;
   letter-spacing: -0.5px;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
   flex-shrink: 0;
 }
 
@@ -185,7 +192,7 @@ button, input {
 }
 
 .nav-item:hover {
-  background-color: var(--bg-subtle);
+  background-color: rgba(255, 255, 255, 0.7);
   color: var(--primary);
 }
 
@@ -193,7 +200,7 @@ button, input {
   background: var(--primary-gradient);
   color: #ffffff;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  box-shadow: var(--shadow-primary);
 }
 
 .nav-item svg {
@@ -209,13 +216,14 @@ button, input {
 
 /* Bottom Promo Card */
 .sidebar-promo {
-  background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F3FF 100%);
+  border: 1px solid rgba(99, 102, 241, 0.25);
   border-radius: var(--radius-lg);
   padding: 1.15rem;
   position: relative;
   overflow: hidden;
   margin-top: 1rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .promo-sparkle {
@@ -277,8 +285,9 @@ button, input {
 /* Top Navigation Bar */
 .topbar {
   height: var(--header-height);
-  background-color: var(--bg-card);
-  border-bottom: 1px solid var(--border-light);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-card);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -308,8 +317,8 @@ button, input {
   width: 100%;
   height: 40px;
   padding: 0 4.5rem 0 2.5rem;
-  background-color: var(--bg-subtle);
-  border: 1px solid transparent;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   font-size: 0.85rem;
   color: var(--text-main);
@@ -327,7 +336,7 @@ button, input {
   position: absolute;
   right: 0.75rem;
   background-color: #ffffff;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   border-radius: 6px;
   padding: 2px 6px;
   font-size: 0.7rem;
@@ -397,7 +406,7 @@ button, input {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -409,7 +418,7 @@ button, input {
 }
 
 .icon-btn:hover {
-  background-color: var(--bg-subtle);
+  background-color: var(--bg-hover);
   color: var(--text-main);
 }
 
@@ -437,8 +446,8 @@ button, input {
 }
 
 .user-profile:hover {
-  background-color: var(--bg-subtle);
-  border-color: var(--border-light);
+  background-color: var(--bg-hover);
+  border-color: var(--border-card);
 }
 
 .user-avatar {
@@ -484,22 +493,22 @@ button, input {
   width: 100%;
 }
 
-/* Welcome Section */
+/* Hero / Welcome Section - Subtle Blue-Lavender Gradient */
 .welcome-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(238, 242, 255, 0.5) 100%);
-  border: 1px solid var(--border-light);
+  background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow-xs);
+  padding: 1.75rem 2.25rem;
+  box-shadow: 0 4px 20px rgba(50, 70, 120, 0.06);
   overflow: hidden;
 }
 
 .welcome-text h2 {
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   font-weight: 800;
   color: var(--text-main);
   letter-spacing: -0.5px;
@@ -510,8 +519,8 @@ button, input {
 
 .welcome-text p {
   font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-top: 0.25rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
 }
 
 .welcome-quote {
@@ -520,7 +529,7 @@ button, input {
 }
 
 .quote-text {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-style: italic;
   font-weight: 500;
   color: var(--text-secondary);
@@ -530,7 +539,7 @@ button, input {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--primary);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
 
 .wave-background {
@@ -539,13 +548,13 @@ button, input {
   bottom: 0;
   top: 0;
   width: 500px;
-  opacity: 0.18;
+  opacity: 0.25;
   pointer-events: none;
   background: radial-gradient(circle at 100% 100%, #6366F1 0%, #A855F7 50%, transparent 80%);
 }
 
 /* ==========================================================================
-   Top 3 Dashboard Cards Grid
+   Top 3 Dashboard Cards Grid - Floating White Cards
    ========================================================================== */
 .dashboard-grid-top {
   display: grid;
@@ -555,18 +564,19 @@ button, input {
 
 .card-container {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
-  padding: 1.5rem;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
   transition: var(--transition);
 }
 
 .card-container:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card-hover);
   border-color: var(--border-subtle);
+  transform: translateY(-1px);
 }
 
 .card-top-header {
@@ -635,12 +645,12 @@ button, input {
   background-color: #E0E7FF;
 }
 
-/* Card 1: Upload Dropzone */
+/* Card 1: Upload Dropzone (Tinted Dropzone) */
 .dropzone-box {
-  border: 2px dashed #CBD5E1;
+  border: 1px dashed var(--border-dropzone);
   border-radius: var(--radius-md);
-  background-color: #F8FAFC;
-  padding: 1.5rem 1rem;
+  background-color: #F7F9FD;
+  padding: 1.6rem 1rem;
   text-align: center;
   cursor: pointer;
   transition: var(--transition);
@@ -665,7 +675,7 @@ button, input {
 }
 
 .dropzone-primary-text {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 0.15rem;
@@ -699,8 +709,8 @@ button, input {
   display: none;
   align-items: center;
   justify-content: space-between;
-  background-color: #F8FAFC;
-  border: 1px solid var(--border-light);
+  background-color: #F7F9FD;
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -748,17 +758,17 @@ button, input {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+  box-shadow: var(--shadow-primary);
   transition: var(--transition);
 }
 
 .btn-cta-primary:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
 }
 
 .btn-cta-primary:disabled {
-  opacity: 0.6;
+  opacity: 0.65;
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
@@ -768,9 +778,10 @@ button, input {
 .processing-progress-bar {
   display: none;
   margin-top: 0.85rem;
-  background: #F1F4F9;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
   border-radius: var(--radius-sm);
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.85rem;
   font-size: 0.75rem;
   color: var(--primary);
   font-weight: 600;
@@ -798,8 +809,8 @@ button, input {
 }
 
 .cat-box {
-  background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
+  background-color: #F8FAFD;
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 1.15rem 0.75rem;
   text-align: center;
@@ -812,22 +823,23 @@ button, input {
 }
 
 .cat-box:hover {
-  border-color: #CBD5E1;
-  background-color: var(--bg-subtle);
+  border-color: #C7D2FE;
+  background-color: #F3F4FF;
   transform: translateY(-2px);
 }
 
 .cat-option input[type="radio"]:checked + .cat-box {
   border: 2px solid var(--primary);
-  background-color: #F5F3FF;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+  background-color: #EEF2FF;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.16);
 }
 
 .cat-icon-container {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--bg-subtle);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-card);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -837,6 +849,7 @@ button, input {
 
 .cat-option input[type="radio"]:checked + .cat-box .cat-icon-container {
   background-color: #EEF2FF;
+  border-color: #C7D2FE;
   color: var(--primary);
 }
 
@@ -853,7 +866,7 @@ button, input {
   margin-top: 0.2rem;
 }
 
-/* Card 3: Quick Stats 2x2 Grid */
+/* Card 3: Quick Stats 2x2 Grid (Pastel Professional Tints) */
 .stats-kpi-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -980,14 +993,14 @@ button, input {
 }
 
 /* ==========================================================================
-   Processed Documents Table Card
+   Processed Documents Table Card - Floating White Container
    ========================================================================== */
 .table-card {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
-  padding: 1.5rem;
+  padding: 1.6rem;
 }
 
 .table-card-header {
@@ -1042,8 +1055,8 @@ button, input {
   width: 100%;
   height: 38px;
   padding: 0 1rem 0 2.25rem;
-  background-color: var(--bg-subtle);
-  border: 1px solid var(--border-light);
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   font-size: 0.82rem;
   color: var(--text-main);
@@ -1070,7 +1083,7 @@ button, input {
   height: 38px;
   padding: 0 0.95rem;
   background-color: #ffffff;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   font-size: 0.82rem;
   font-weight: 600;
@@ -1083,15 +1096,16 @@ button, input {
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-subtle);
+  background-color: var(--bg-hover);
   color: var(--text-main);
+  border-color: var(--border-subtle);
 }
 
 .btn-refresh {
   background: var(--primary-gradient);
   color: #ffffff;
   border: none;
-  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
 }
 
 .btn-refresh:hover {
@@ -1114,7 +1128,7 @@ button, input {
 }
 
 .modern-table thead {
-  background-color: #F8FAFC;
+  background-color: #F5F7FB;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -1132,6 +1146,7 @@ button, input {
   border-bottom: 1px solid var(--border-light);
   color: var(--text-secondary);
   vertical-align: middle;
+  background-color: #FFFFFF;
 }
 
 .modern-table tbody tr {
@@ -1139,12 +1154,15 @@ button, input {
   cursor: pointer;
 }
 
-.modern-table tbody tr:hover {
-  background-color: #F8FAFC;
+.modern-table tbody tr:hover td {
+  background-color: #F6F8FC;
 }
 
-.modern-table tbody tr.selected-row {
+.modern-table tbody tr.selected-row td {
   background-color: #EEF2FF;
+}
+
+.modern-table tbody tr.selected-row td:first-child {
   border-left: 3px solid var(--primary);
 }
 
@@ -1223,7 +1241,7 @@ button, input {
   width: 30px;
   height: 30px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -1234,7 +1252,7 @@ button, input {
 }
 
 .tbl-action-btn:hover {
-  background-color: var(--bg-subtle);
+  background-color: #EEF2FF;
   color: var(--primary);
   border-color: var(--primary);
 }
@@ -1244,9 +1262,9 @@ button, input {
    ========================================================================== */
 .inspector-card {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   padding: 1.75rem;
   display: none;
 }
@@ -1282,8 +1300,8 @@ button, input {
 }
 
 .inspector-metric-box {
-  background-color: #F8FAFC;
-  border: 1px solid var(--border-light);
+  background-color: #F8FAFD;
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
 }
@@ -1341,8 +1359,8 @@ button, input {
 
 /* Financial Validation Cards */
 .val-card-item {
-  background-color: #F8FAFC;
-  border: 1px solid var(--border-light);
+  background-color: #F8FAFD;
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 1rem;
   margin-bottom: 0.85rem;
@@ -1366,7 +1384,7 @@ button, input {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
@@ -1388,8 +1406,8 @@ button, input {
 }
 
 .field-cell {
-  background-color: #F8FAFC;
-  border: 1px solid var(--border-light);
+  background-color: #F8FAFD;
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 0.85rem;
 }
