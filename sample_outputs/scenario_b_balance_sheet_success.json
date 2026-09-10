@@ -178,8 +178,8 @@
   },
   "processing_metadata": {
     "ocr_used": false,
-    "processed_at": "2026-09-10T17:27:41.767018+00:00",
-    "processing_time_ms": 2.91,
+    "processed_at": "2026-09-10T17:33:58.592522+00:00",
+    "processing_time_ms": 3.04,
     "page_count": 1,
     "extracted_fields_count": 12,
     "engine": "Gemini/OpenAI+RuleEngine"
