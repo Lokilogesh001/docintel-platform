@@ -31,6 +31,7 @@ class ProcessingMetadata(BaseModel):
     page_count: int
     extracted_fields_count: int = 0
     engine: str = "PyMuPDF+LLM"
+    llm_engine: Optional[str] = None  # e.g. "gpt-4o-mini" or None if NLP fallback
 
 class DocumentProcessResponse(BaseModel):
     document_name: str

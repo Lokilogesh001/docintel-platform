@@ -22,11 +22,16 @@ class ExtractionService:
         Falls back to deterministic rule-based NLP extraction if no API key is set or on failure.
         """
         extracted_dict: Optional[Dict[str, Any]] = None
+        self.last_llm_engine: Optional[str] = None
 
         if settings.GEMINI_API_KEY:
             extracted_dict = self._extract_with_gemini(document_type, doc_text)
+            if extracted_dict:
+                self.last_llm_engine = "gemini-1.5-flash"
         elif settings.OPENAI_API_KEY:
             extracted_dict = self._extract_with_openai(document_type, doc_text)
+            if extracted_dict:
+                self.last_llm_engine = settings.OPENAI_MODEL_NAME
 
         if not extracted_dict:
             logger.info(f"Using rule-based NLP extractor fallback for {document_type}")

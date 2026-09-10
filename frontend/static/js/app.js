@@ -15,10 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Health Elements
   const healthBadge = document.getElementById("health-badge");
   const healthText = document.getElementById("health-text");
+  const llmBadge = document.getElementById("llm-badge");
+  const llmText = document.getElementById("llm-text");
+
+  // Stats bar elements
+  const statTotal = document.getElementById("stat-total");
+  const statPass = document.getElementById("stat-pass");
+  const statFail = document.getElementById("stat-fail");
+  const statNa = document.getElementById("stat-na");
+  const statRejected = document.getElementById("stat-rejected");
 
   // Dashboard Elements
   const docTableBody = document.getElementById("doc-table-body");
   const btnRefresh = document.getElementById("btn-refresh-docs");
+  const searchInput = document.getElementById("search-docs");
 
   // Result Viewer Elements
   const resultViewer = document.getElementById("result-viewer");
@@ -55,6 +65,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (res.ok) {
         const data = await res.json();
         healthText.textContent = `API Ready (${data.environment})`;
+        // Show LLM badge if configured
+        if (data.llm_configured) {
+          llmBadge.style.display = "flex";
+          llmText.textContent = "GPT-4o-mini Active";
+        } else {
+          llmBadge.style.display = "flex";
+          llmText.textContent = "NLP Fallback Mode";
+          llmBadge.style.background = "rgba(100,116,139,0.12)";
+          llmBadge.style.borderColor = "rgba(100,116,139,0.3)";
+          llmBadge.style.color = "#94a3b8";
+          document.querySelector(".llm-dot").style.background = "#64748b";
+          document.querySelector(".llm-dot").style.boxShadow = "none";
+          document.querySelector(".llm-dot").style.animation = "none";
+        }
       } else {
         healthText.textContent = "API Degraded";
         healthBadge.style.color = "var(--status-fail-text)";
@@ -192,16 +216,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------------------------------------------------------------
   // 4. DASHBOARD DOCUMENT LIST
   // -------------------------------------------------------------
+  let allDocs = [];
+
   async function loadDocuments() {
     try {
-      const res = await fetch("/api/v1/documents?limit=50");
+      const res = await fetch("/api/v1/documents?limit=100");
       if (res.ok) {
-        const docs = await res.json();
-        renderDocumentTable(docs);
+        allDocs = await res.json();
+        renderDocumentTable(allDocs);
+        updateStatsBar(allDocs);
       }
     } catch (e) {
       console.error("Failed to load documents:", e);
     }
+  }
+
+  function updateStatsBar(docs) {
+    const total = docs.length;
+    const pass = docs.filter(d => d.processing_status === "PASS").length;
+    const fail = docs.filter(d => d.processing_status === "FAIL").length;
+    const na = docs.filter(d => d.processing_status === "NOT_APPLICABLE").length;
+    const rejected = docs.filter(d => d.processing_status === "REJECTED").length;
+    statTotal.textContent = total;
+    statPass.textContent = pass;
+    statFail.textContent = fail;
+    statNa.textContent = na;
+    statRejected.textContent = rejected;
+  }
+
+  // Search filter
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value.toLowerCase().trim();
+      const filtered = q ? allDocs.filter(d =>
+        d.document_name.toLowerCase().includes(q) ||
+        d.document_type.toLowerCase().includes(q) ||
+        d.processing_status.toLowerCase().includes(q)
+      ) : allDocs;
+      renderDocumentTable(filtered);
+    });
   }
 
   btnRefresh.addEventListener("click", () => {
@@ -238,9 +291,13 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     }).join("");
 
-    // Add click listeners to rows
+    // Add click listeners to rows with selected-row highlight
     docTableBody.querySelectorAll("tr").forEach((row) => {
+      row.style.cursor = "pointer";
       row.addEventListener("click", () => {
+        // Deselect previous
+        docTableBody.querySelectorAll("tr").forEach(r => r.classList.remove("selected-row"));
+        row.classList.add("selected-row");
         const name = row.getAttribute("data-doc-name");
         if (name) fetchAndInspectDocument(name);
       });
@@ -281,6 +338,19 @@ document.addEventListener("DOMContentLoaded", () => {
     metaPages.textContent = `${data.file_validation.page_count} page(s)`;
     metaTime.textContent = `${data.processing_metadata.processing_time_ms} ms`;
     metaOcr.textContent = data.processing_metadata.ocr_used ? "OCR Fallback" : "Native Text";
+
+    // Show extraction engine label
+    const engineEl = document.getElementById("res-extraction-engine");
+    if (engineEl) {
+      const llmEngine = data.processing_metadata.llm_engine;
+      if (llmEngine) {
+        engineEl.textContent = `🤖 ${llmEngine}`;
+        engineEl.style.color = "#a5b4fc";
+      } else {
+        engineEl.textContent = "⚙️ NLP Fallback";
+        engineEl.style.color = "var(--text-muted)";
+      }
+    }
 
     // Render Tab 1: Financial Validations
     renderValidationTab(data.validation);

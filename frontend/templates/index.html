@@ -4,16 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DocIntel AI - Intelligent Document Extraction & Validation Platform</title>
-  <meta name="description" content="AI document intelligence platform for automated financial document extraction and deterministic validation.">
-  <!-- Google Fonts: Inter -->
+  <meta name="description" content="AI document intelligence platform for automated financial document extraction and deterministic validation using GPT-4o-mini and PyMuPDF OCR.">
+  <meta name="keywords" content="document intelligence, financial extraction, AI, OCR, invoice, balance sheet">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text y='0.9em' x='50%' text-anchor='middle' font-size='60' font-family='Arial' fill='white'>DI</text></svg>">
 </head>
 <body>
   <div class="ambient-glow"></div>
+  <div class="ambient-glow-2"></div>
 
   <!-- Top Navigation -->
   <header class="navbar">
@@ -21,7 +25,7 @@
       <div class="brand-icon">DI</div>
       <div class="brand-text">
         <h1>DocIntel Platform</h1>
-        <span class="brand-subtitle">AI Extraction & Deterministic Financial Validation</span>
+        <span class="brand-subtitle">AI Extraction &amp; Deterministic Financial Validation</span>
       </div>
     </div>
     <div class="nav-links">
@@ -29,9 +33,41 @@
         <span class="health-dot"></span>
         <span id="health-text">Checking API...</span>
       </div>
+      <div class="llm-badge" id="llm-badge" style="display:none;">
+        <span class="llm-dot"></span>
+        <span id="llm-text">GPT-4o-mini</span>
+      </div>
       <a href="/docs" target="_blank" class="nav-btn" id="nav-swagger-btn">Swagger API Docs ↗</a>
     </div>
   </header>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar" id="stats-bar">
+    <div class="stat-item">
+      <span class="stat-number" id="stat-total">—</span>
+      <span class="stat-label">Documents Processed</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number stat-pass" id="stat-pass">—</span>
+      <span class="stat-label">Validation PASS</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number stat-fail" id="stat-fail">—</span>
+      <span class="stat-label">Validation FAIL</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number stat-na" id="stat-na">—</span>
+      <span class="stat-label">NOT APPLICABLE</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number stat-rejected" id="stat-rejected">—</span>
+      <span class="stat-label">Rejected</span>
+    </div>
+  </div>
 
   <main class="container">
     <div class="layout-grid">
@@ -66,7 +102,7 @@
                   <input type="radio" name="doc_type" value="profit_and_loss" id="type-pnl">
                   <div class="type-card">
                     <span class="type-icon">📈</span>
-                    <span class="type-title">Profit & Loss</span>
+                    <span class="type-title">Profit &amp; Loss</span>
                   </div>
                 </label>
                 <label class="type-option">
@@ -104,21 +140,75 @@
             <!-- 3. Process CTA Button -->
             <button type="submit" class="btn-primary" id="btn-process" disabled>
               <span class="spinner" id="spinner"></span>
-              <span id="btn-text">Extract & Validate Document</span>
+              <span id="btn-text">Extract &amp; Validate Document</span>
             </button>
           </form>
         </div>
 
         <!-- Pipeline Information Card -->
-        <div class="card" style="padding: 1.25rem;">
-          <h3 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-secondary);">⚙️ Core Processing Pipeline</h3>
-          <ul style="list-style: none; font-size: 0.8rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
-            <li>🛡️ <strong>File Validation:</strong> MIME, corruption, page limits (&le;3)</li>
-            <li>🔍 <strong>Text Extraction:</strong> Native PyMuPDF + OCR fallback</li>
-            <li>🤖 <strong>AI Extraction:</strong> Structured JSON & line items</li>
-            <li>⚖️ <strong>Financial Validation:</strong> Strict deterministic Python math</li>
-            <li>💾 <strong>Persistence:</strong> Stored persistently in SQLite repository</li>
-          </ul>
+        <div class="card pipeline-card">
+          <h3 class="pipeline-title">⚙️ Core Processing Pipeline</h3>
+          <div class="pipeline-steps">
+            <div class="pipeline-step">
+              <div class="step-icon">🛡️</div>
+              <div class="step-content">
+                <div class="step-name">File Validation</div>
+                <div class="step-desc">MIME, corruption, page limits (≤3)</div>
+              </div>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">🔍</div>
+              <div class="step-content">
+                <div class="step-name">Text Extraction</div>
+                <div class="step-desc">Native PyMuPDF + OCR fallback</div>
+              </div>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">🤖</div>
+              <div class="step-content">
+                <div class="step-name">AI Extraction</div>
+                <div class="step-desc">GPT-4o-mini structured JSON</div>
+              </div>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">⚖️</div>
+              <div class="step-content">
+                <div class="step-name">Financial Validation</div>
+                <div class="step-desc">Strict deterministic Python math</div>
+              </div>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">💾</div>
+              <div class="step-content">
+                <div class="step-name">Persistence</div>
+                <div class="step-desc">SQLite repository storage</div>
+              </div>
+              <div class="step-arrow"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links Card -->
+        <div class="card quick-links-card">
+          <h3 class="pipeline-title">🔗 Quick Links</h3>
+          <div class="quick-links">
+            <a href="/docs" target="_blank" class="quick-link-btn">
+              <span>📘</span> Swagger UI
+            </a>
+            <a href="/redoc" target="_blank" class="quick-link-btn">
+              <span>📗</span> ReDoc
+            </a>
+            <a href="/api/v1/health" target="_blank" class="quick-link-btn">
+              <span>❤️</span> Health Check
+            </a>
+            <a href="/api/v1/documents" target="_blank" class="quick-link-btn">
+              <span>🗂️</span> Documents API
+            </a>
+          </div>
         </div>
       </section>
 
@@ -133,10 +223,10 @@
           </div>
 
           <!-- Empty State -->
-          <div id="empty-viewer" style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
-            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📑</div>
-            <p style="font-size: 0.95rem; font-weight: 500; color: var(--text-secondary);">No Document Selected</p>
-            <p style="font-size: 0.8rem; margin-top: 0.25rem;">Upload a document or select an existing record from the dashboard below to inspect.</p>
+          <div id="empty-viewer" class="empty-viewer">
+            <div class="empty-icon">📑</div>
+            <p class="empty-title">No Document Selected</p>
+            <p class="empty-desc">Upload a document or click a row in the dashboard below to inspect results.</p>
           </div>
 
           <!-- Active Result Viewer -->
@@ -144,7 +234,10 @@
             <div class="result-header">
               <div>
                 <h3 id="res-doc-name" style="font-size: 1.25rem; font-weight: 700; color: #fff;">Document Name</h3>
-                <span id="res-doc-type" style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 600;">INVOICE</span>
+                <div style="display:flex; gap: 0.5rem; align-items: center; margin-top: 0.25rem;">
+                  <span id="res-doc-type" style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 600;">INVOICE</span>
+                  <span id="res-extraction-engine" style="font-size: 0.75rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 1px 8px; border-radius: 20px;"></span>
+                </div>
               </div>
             </div>
 
@@ -171,8 +264,8 @@
             <!-- Tabs -->
             <div class="tabs">
               <button class="tab-btn active" data-tab="tab-validation" id="tab-btn-val">Financial Validations</button>
-              <button class="tab-btn" data-tab="tab-fields" id="tab-btn-fields">Extracted Fields & Evidence</button>
-              <button class="tab-btn" data-tab="tab-tables" id="tab-btn-tables">Tables & Line Items</button>
+              <button class="tab-btn" data-tab="tab-fields" id="tab-btn-fields">Extracted Fields &amp; Evidence</button>
+              <button class="tab-btn" data-tab="tab-tables" id="tab-btn-tables">Tables &amp; Line Items</button>
               <button class="tab-btn" data-tab="tab-raw-json" id="tab-btn-json">Raw JSON</button>
             </div>
 
@@ -200,7 +293,10 @@
         <div class="card" id="dashboard-card">
           <div class="card-header">
             <h2 class="card-title">🗂️ Processed Documents Dashboard</h2>
-            <button class="nav-btn" id="btn-refresh-docs" style="cursor: pointer;">🔄 Refresh</button>
+            <div style="display:flex; gap: 0.5rem; align-items: center;">
+              <input type="text" id="search-docs" placeholder="Search documents..." class="search-input">
+              <button class="nav-btn" id="btn-refresh-docs" style="cursor: pointer;">🔄 Refresh</button>
+            </div>
           </div>
           
           <div class="table-responsive">

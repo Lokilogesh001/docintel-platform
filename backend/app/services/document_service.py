@@ -93,13 +93,15 @@ class DocumentService:
 
         # 6. Database Persistence Stage
         elapsed_ms = round((time.perf_counter() - start_time) * 1000, 2)
+        llm_engine_used = getattr(extraction_service, "last_llm_engine", None)
         meta = ProcessingMetadata(
             ocr_used=doc_text.ocr_used,
             processed_at=datetime.now(timezone.utc).isoformat(),
             processing_time_ms=elapsed_ms,
             page_count=file_val_result.page_count,
             extracted_fields_count=len([k for k, v in extracted_data.items() if v is not None]),
-            engine="Gemini/OpenAI+RuleEngine"
+            engine="Gemini/OpenAI+RuleEngine" if llm_engine_used else "NLP+RuleEngine",
+            llm_engine=llm_engine_used
         )
 
         with StageTimer("Database Persistence", filename) as _:
