@@ -3,329 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DocIntel AI - Intelligent Document Extraction & Validation Platform</title>
+  <title>DocIntel AI — Intelligent Document Platform</title>
   <meta name="description" content="AI document intelligence platform for automated financial document extraction and deterministic validation using GPT-4o-mini and PyMuPDF OCR.">
-  <meta name="keywords" content="document intelligence, financial extraction, AI, OCR, invoice, balance sheet">
-  <!-- Google Fonts -->
+  <meta name="keywords" content="document intelligence, financial extraction, AI, OCR, invoice, balance sheet, SaaS dashboard">
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/static/css/style.css">
   <!-- Favicon inline SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text y='0.9em' x='50%' text-anchor='middle' font-size='60' font-family='Arial' fill='white'>DI</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'/><text y='0.88em' x='50%' text-anchor='middle' font-size='56' font-family='sans-serif' font-weight='bold' fill='white'>DI</text></svg>">
 </head>
 <body>
-  <div class="ambient-glow"></div>
-  <div class="ambient-glow-2"></div>
 
-  <!-- Top Navigation -->
-  <header class="navbar">
-    <div class="nav-brand">
-      <div class="brand-icon">DI</div>
-      <div class="brand-text">
-        <h1>DocIntel Platform</h1>
-        <span class="brand-subtitle">AI Extraction &amp; Deterministic Financial Validation</span>
+  <div class="app-container">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <!-- Brand Logo Header -->
+      <div class="sidebar-header">
+        <div class="brand-badge">DI</div>
+        <div class="brand-info">
+          <h1>DocIntel AI</h1>
+          <span>Intelligent Document Platform</span>
+        </div>
       </div>
-    </div>
-    <div class="nav-links">
-      <div class="health-badge" id="health-badge">
-        <span class="health-dot"></span>
-        <span id="health-text">Checking API...</span>
-      </div>
-      <div class="llm-badge" id="llm-badge" style="display:none;">
-        <span class="llm-dot"></span>
-        <span id="llm-text">GPT-4o-mini</span>
-      </div>
-      <a href="/docs" target="_blank" class="nav-btn" id="nav-swagger-btn">Swagger API Docs ↗</a>
-    </div>
-  </header>
 
-  <!-- Stats Bar -->
-  <div class="stats-bar" id="stats-bar">
-    <div class="stat-item">
-      <span class="stat-number" id="stat-total">—</span>
-      <span class="stat-label">Documents Processed</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat-item">
-      <span class="stat-number stat-pass" id="stat-pass">—</span>
-      <span class="stat-label">Validation PASS</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat-item">
-      <span class="stat-number stat-fail" id="stat-fail">—</span>
-      <span class="stat-label">Validation FAIL</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat-item">
-      <span class="stat-number stat-na" id="stat-na">—</span>
-      <span class="stat-label">NOT APPLICABLE</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat-item">
-      <span class="stat-number stat-rejected" id="stat-rejected">—</span>
-      <span class="stat-label">Rejected</span>
-    </div>
-  </div>
+      <!-- Navigation Menu -->
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item active" id="nav-dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#upload-card" class="nav-item" id="nav-upload">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+          <span>Upload Document</span>
+        </a>
+        <a href="#table-section" class="nav-item" id="nav-docs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Processed Documents</span>
+        </a>
+        <a href="#stats-section" class="nav-item" id="nav-analytics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Analytics</span>
+        </a>
+        <a href="#inspection-card" class="nav-item" id="nav-reports">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          <span>Validation Reports</span>
+        </a>
+        <a href="/docs" target="_blank" class="nav-item" id="nav-swagger-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>API Documentation</span>
+        </a>
+        <a href="#settings" class="nav-item" id="nav-settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
 
-  <main class="container">
-    <div class="layout-grid">
+      <!-- Bottom Promotional AI Card -->
+      <div class="sidebar-promo">
+        <div class="promo-sparkle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        </div>
+        <div class="promo-title">AI-Powered Document Intelligence</div>
+        <div class="promo-desc">Extract. Validate. Analyze. Make better decisions.</div>
+        <div class="promo-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
       
-      <!-- LEFT COLUMN: Upload & Configuration -->
-      <section class="left-col">
-        <div class="card" id="upload-card">
-          <div class="card-header">
-            <h2 class="card-title">📤 Upload Document</h2>
-          </div>
+      <!-- Top Navigation Bar -->
+      <header class="topbar">
+        <div class="search-container">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="global-search-input" class="global-search-input" placeholder="Search documents, categories, or keywords...">
+          <span class="search-shortcut">Ctrl + K</span>
+        </div>
 
-          <form id="upload-form">
-            <!-- 1. Document Type Selector -->
-            <div class="form-group">
-              <label class="form-label">Select Document Category:</label>
-              <div class="doc-type-selector">
-                <label class="type-option">
-                  <input type="radio" name="doc_type" value="invoice" checked id="type-invoice">
-                  <div class="type-card">
-                    <span class="type-icon">🧾</span>
-                    <span class="type-title">Invoice</span>
-                  </div>
-                </label>
-                <label class="type-option">
-                  <input type="radio" name="doc_type" value="balance_sheet" id="type-balance-sheet">
-                  <div class="type-card">
-                    <span class="type-icon">📊</span>
-                    <span class="type-title">Balance Sheet</span>
-                  </div>
-                </label>
-                <label class="type-option">
-                  <input type="radio" name="doc_type" value="profit_and_loss" id="type-pnl">
-                  <div class="type-card">
-                    <span class="type-icon">📈</span>
-                    <span class="type-title">Profit &amp; Loss</span>
-                  </div>
-                </label>
-                <label class="type-option">
-                  <input type="radio" name="doc_type" value="cash_flow_statement" id="type-cash-flow">
-                  <div class="type-card">
-                    <span class="type-icon">💵</span>
-                    <span class="type-title">Cash Flow</span>
-                  </div>
-                </label>
+        <div class="topbar-actions">
+          <!-- Live API Status Chip -->
+          <div class="api-status-chip" id="health-badge">
+            <div class="status-dot-pulse"></div>
+            <div class="api-status-text">
+              <span class="api-status-title" id="health-text">API Ready</span>
+              <span class="api-status-sub" id="llm-text">GPT-4o-mini</span>
+            </div>
+          </div>
+          <!-- Hidden compatibility elements for app.js -->
+          <div id="llm-badge" style="display:none;"><span class="llm-dot"></span></div>
+
+          <!-- Notification Bell -->
+          <button class="icon-btn" title="Notifications" aria-label="Notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- User Profile -->
+          <div class="user-profile">
+            <div class="user-avatar">L</div>
+            <div class="user-details">
+              <span class="user-name">Logeshwaran</span>
+              <span class="user-role">Developer</span>
+            </div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Body Content -->
+      <main class="content-body" id="dashboard">
+        
+        <!-- Welcome Hero Banner -->
+        <section class="welcome-section">
+          <div class="welcome-text">
+            <h2>Welcome back, Logeshwaran! <span>👋</span></h2>
+            <p>Extract insights from financial documents with the power of AI.</p>
+          </div>
+          <div class="welcome-quote">
+            <div class="quote-text">"Turning documents into decisions"</div>
+            <div class="quote-author">— DocIntel AI</div>
+          </div>
+          <div class="wave-background"></div>
+        </section>
+
+        <!-- Top 3 Dashboard Cards Grid -->
+        <section class="dashboard-grid-top">
+          
+          <!-- Card 1: Upload Document -->
+          <div class="card-container" id="upload-card">
+            <div class="card-top-header">
+              <div class="card-title-group">
+                <div class="card-icon-badge icon-purple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                </div>
+                <div class="card-heading">
+                  <h3>Upload Document</h3>
+                  <p>Drag &amp; drop your file here or click to browse</p>
+                </div>
               </div>
+              <span class="pill-badge-action" id="btn-view-formats">View Supported Formats</span>
             </div>
 
-            <!-- 2. Dropzone Upload -->
-            <div class="form-group">
-              <label class="form-label">Upload File (PDF, JPG, PNG &le; 3 pages):</label>
-              <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+            <!-- Form -->
+            <form id="upload-form" style="display: flex; flex-direction: column; flex: 1;">
               
-              <div class="dropzone" id="dropzone">
-                <div class="dropzone-icon">📄</div>
-                <div class="dropzone-text">Click or drag document here</div>
-                <div class="dropzone-subtext">Native/Scanned PDF, JPG, PNG (Max 15MB)</div>
+              <!-- Hidden Native Input -->
+              <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+
+              <!-- Dropzone Container -->
+              <div class="dropzone-box" id="dropzone">
+                <svg class="cloud-upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path><path d="M12 12v9"></path><path d="m16 16-4-4-4 4"></path></svg>
+                <div class="dropzone-primary-text">Drop your document here</div>
+                <div class="dropzone-secondary-text">or click to select a file &bull; Supports PDF, JPG, PNG (Max 3 pages, 15MB)</div>
+                <div class="format-tags-row">
+                  <span class="format-tag tag-pdf">PDF</span>
+                  <span class="format-tag tag-jpg">JPG</span>
+                  <span class="format-tag tag-png">PNG</span>
+                </div>
               </div>
 
-              <div class="file-preview" id="file-preview">
-                <div class="file-info">
-                  <span>📎</span>
+              <!-- Selected File Preview -->
+              <div class="file-selected-box" id="file-preview">
+                <div class="file-selected-info">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
                   <span id="file-name-display">sample.pdf</span>
                 </div>
-                <button type="button" class="btn-remove-file" id="btn-remove-file" title="Remove file">&times;</button>
+                <button type="button" class="btn-remove" id="btn-remove-file" title="Remove file">&times;</button>
+              </div>
+
+              <!-- Alerts -->
+              <div id="alert-container"></div>
+
+              <!-- Primary CTA Button -->
+              <button type="submit" class="btn-cta-primary" id="btn-process" disabled>
+                <span class="spinner-inline" id="spinner" style="display: none;"></span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                <span id="btn-text">Choose File</span>
+              </button>
+
+              <!-- Progress Pipeline Indicator -->
+              <div class="processing-progress-bar" id="pipeline-progress">
+                <span>⚡ Pipeline Active: Validation &rarr; OCR &rarr; AI Extraction &rarr; Financial Rules</span>
+              </div>
+            </form>
+          </div>
+
+          <!-- Card 2: Document Category -->
+          <div class="card-container" id="category-card">
+            <div class="card-top-header">
+              <div class="card-title-group">
+                <div class="card-icon-badge icon-blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                </div>
+                <div class="card-heading">
+                  <h3>Document Category</h3>
+                  <p>Select the type of document you're uploading</p>
+                </div>
               </div>
             </div>
 
-            <div id="alert-container"></div>
+            <!-- 2x2 Category Selector -->
+            <div class="category-grid">
+              
+              <!-- Option 1: Invoice -->
+              <label class="cat-option">
+                <input type="radio" name="doc_type" value="invoice" checked id="type-invoice">
+                <div class="cat-box">
+                  <div class="cat-icon-container">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  </div>
+                  <div class="cat-title">Invoice</div>
+                  <div class="cat-desc">Bills &amp; Receipts</div>
+                </div>
+              </label>
 
-            <!-- 3. Process CTA Button -->
-            <button type="submit" class="btn-primary" id="btn-process" disabled>
-              <span class="spinner" id="spinner"></span>
-              <span id="btn-text">Extract &amp; Validate Document</span>
-            </button>
-          </form>
-        </div>
+              <!-- Option 2: Balance Sheet -->
+              <label class="cat-option">
+                <input type="radio" name="doc_type" value="balance_sheet" id="type-balance-sheet">
+                <div class="cat-box">
+                  <div class="cat-icon-container">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #2563EB;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  </div>
+                  <div class="cat-title">Balance Sheet</div>
+                  <div class="cat-desc">Financial Position</div>
+                </div>
+              </label>
 
-        <!-- Pipeline Information Card -->
-        <div class="card pipeline-card">
-          <h3 class="pipeline-title">⚙️ Core Processing Pipeline</h3>
-          <div class="pipeline-steps">
-            <div class="pipeline-step">
-              <div class="step-icon">🛡️</div>
-              <div class="step-content">
-                <div class="step-name">File Validation</div>
-                <div class="step-desc">MIME, corruption, page limits (≤3)</div>
-              </div>
-              <div class="step-arrow">→</div>
-            </div>
-            <div class="pipeline-step">
-              <div class="step-icon">🔍</div>
-              <div class="step-content">
-                <div class="step-name">Text Extraction</div>
-                <div class="step-desc">Native PyMuPDF + OCR fallback</div>
-              </div>
-              <div class="step-arrow">→</div>
-            </div>
-            <div class="pipeline-step">
-              <div class="step-icon">🤖</div>
-              <div class="step-content">
-                <div class="step-name">AI Extraction</div>
-                <div class="step-desc">GPT-4o-mini structured JSON</div>
-              </div>
-              <div class="step-arrow">→</div>
-            </div>
-            <div class="pipeline-step">
-              <div class="step-icon">⚖️</div>
-              <div class="step-content">
-                <div class="step-name">Financial Validation</div>
-                <div class="step-desc">Strict deterministic Python math</div>
-              </div>
-              <div class="step-arrow">→</div>
-            </div>
-            <div class="pipeline-step">
-              <div class="step-icon">💾</div>
-              <div class="step-content">
-                <div class="step-name">Persistence</div>
-                <div class="step-desc">SQLite repository storage</div>
-              </div>
-              <div class="step-arrow"></div>
+              <!-- Option 3: Profit & Loss -->
+              <label class="cat-option">
+                <input type="radio" name="doc_type" value="profit_and_loss" id="type-pnl">
+                <div class="cat-box">
+                  <div class="cat-icon-container">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #8B5CF6;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                  </div>
+                  <div class="cat-title">Profit &amp; Loss</div>
+                  <div class="cat-desc">Income Statement</div>
+                </div>
+              </label>
+
+              <!-- Option 4: Cash Flow -->
+              <label class="cat-option">
+                <input type="radio" name="doc_type" value="cash_flow_statement" id="type-cash-flow">
+                <div class="cat-box">
+                  <div class="cat-icon-container">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #16A34A;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  </div>
+                  <div class="cat-title">Cash Flow</div>
+                  <div class="cat-desc">Cash Movements</div>
+                </div>
+              </label>
+
             </div>
           </div>
-        </div>
 
-        <!-- Quick Links Card -->
-        <div class="card quick-links-card">
-          <h3 class="pipeline-title">🔗 Quick Links</h3>
-          <div class="quick-links">
-            <a href="/docs" target="_blank" class="quick-link-btn">
-              <span>📘</span> Swagger UI
-            </a>
-            <a href="/redoc" target="_blank" class="quick-link-btn">
-              <span>📗</span> ReDoc
-            </a>
-            <a href="/api/v1/health" target="_blank" class="quick-link-btn">
-              <span>❤️</span> Health Check
-            </a>
-            <a href="/api/v1/documents" target="_blank" class="quick-link-btn">
-              <span>🗂️</span> Documents API
-            </a>
+          <!-- Card 3: Quick Stats & System Status -->
+          <div class="card-container" id="stats-section">
+            <div class="card-top-header">
+              <div class="card-title-group">
+                <div class="card-icon-badge icon-green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <div class="card-heading">
+                  <h3>Quick Stats</h3>
+                  <p>Real-time processing overview</p>
+                </div>
+              </div>
+              <span class="pill-badge-action" style="background: var(--bg-subtle); color: var(--text-secondary); border-color: var(--border-light);">This Month &dtrif;</span>
+            </div>
+
+            <!-- 2x2 Quick Stats Grid -->
+            <div class="stats-kpi-grid">
+              <!-- KPI 1: Total Processed -->
+              <div class="kpi-tile kpi-tile-blue">
+                <div class="kpi-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </div>
+                <div class="kpi-data">
+                  <span class="kpi-number" id="stat-total">50</span>
+                  <span class="kpi-label">Total Processed</span>
+                  <span class="kpi-trend trend-up">&uarr; 100%</span>
+                </div>
+              </div>
+
+              <!-- KPI 2: Passed -->
+              <div class="kpi-tile kpi-tile-green">
+                <div class="kpi-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="kpi-data">
+                  <span class="kpi-number" id="stat-pass">48</span>
+                  <span class="kpi-label">Passed</span>
+                  <span class="kpi-trend trend-up">&uarr; 98%</span>
+                </div>
+              </div>
+
+              <!-- KPI 3: Not Applicable -->
+              <div class="kpi-tile kpi-tile-amber">
+                <div class="kpi-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <div class="kpi-data">
+                  <span class="kpi-number" id="stat-na">1</span>
+                  <span class="kpi-label">Not Applicable</span>
+                  <span class="kpi-trend trend-neutral">&mdash;</span>
+                </div>
+              </div>
+
+              <!-- KPI 4: Rejected / Failed -->
+              <div class="kpi-tile kpi-tile-red">
+                <div class="kpi-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                </div>
+                <div class="kpi-data">
+                  <span class="kpi-number" id="stat-rejected">1</span>
+                  <span class="kpi-label">Rejected</span>
+                  <span class="kpi-trend trend-down">&darr; 2%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hidden stat-fail element for app.js compatibility -->
+            <span id="stat-fail" style="display: none;">0</span>
+
+            <!-- System Status Tile -->
+            <div class="system-status-tile" id="system-status-card">
+              <div class="status-tile-left">
+                <div class="status-shield-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div>
+                  <div class="status-title-text">System Status</div>
+                  <div class="status-sub-text">All systems operational</div>
+                </div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--success);"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
           </div>
-        </div>
-      </section>
 
-      <!-- RIGHT COLUMN: Inspection & Dashboard -->
-      <section class="right-col">
-        
-        <!-- Document Result Inspector Card -->
-        <div class="card" id="inspection-card">
-          <div class="card-header">
-            <h2 class="card-title">🔍 Document Result Inspector</h2>
-            <div id="res-doc-status"></div>
+        </section>
+
+        <!-- Document Result Inspector Card (Appears when row is selected or after upload) -->
+        <section class="inspector-card" id="inspection-card">
+          <div class="inspector-header">
+            <div class="inspector-title-area">
+              <h3 id="res-doc-name">Document Name</h3>
+              <div class="inspector-sub-meta">
+                <span class="cat-pill" id="res-doc-type">INVOICE</span>
+                <span id="res-extraction-engine" style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 20px;">🤖 GPT-4o-mini</span>
+              </div>
+            </div>
+            <div id="res-doc-status">
+              <span class="status-pill status-pass">PASS</span>
+            </div>
           </div>
 
           <!-- Empty State -->
-          <div id="empty-viewer" class="empty-viewer">
+          <div id="empty-viewer" class="empty-box">
             <div class="empty-icon">📑</div>
-            <p class="empty-title">No Document Selected</p>
-            <p class="empty-desc">Upload a document or click a row in the dashboard below to inspect results.</p>
+            <p style="font-weight: 700; color: var(--text-main);">No Document Selected</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Upload a document or click any row in the table below to inspect results.</p>
           </div>
 
-          <!-- Active Result Viewer -->
+          <!-- Active Viewer Content -->
           <div id="result-viewer" style="display: none;">
-            <div class="result-header">
-              <div>
-                <h3 id="res-doc-name" style="font-size: 1.25rem; font-weight: 700; color: #fff;">Document Name</h3>
-                <div style="display:flex; gap: 0.5rem; align-items: center; margin-top: 0.25rem;">
-                  <span id="res-doc-type" style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 600;">INVOICE</span>
-                  <span id="res-extraction-engine" style="font-size: 0.75rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 1px 8px; border-radius: 20px;"></span>
-                </div>
+            <!-- Key Metrics Grid -->
+            <div class="inspector-metrics-grid">
+              <div class="inspector-metric-box">
+                <div class="metric-label">Confidence Score</div>
+                <div class="metric-value" id="meta-confidence" style="color: var(--primary);">98%</div>
+              </div>
+              <div class="inspector-metric-box">
+                <div class="metric-label">Total Pages</div>
+                <div class="metric-value" id="meta-pages">1 page</div>
+              </div>
+              <div class="inspector-metric-box">
+                <div class="metric-label">Processing Latency</div>
+                <div class="metric-value" id="meta-time">45 ms</div>
+              </div>
+              <div class="inspector-metric-box">
+                <div class="metric-label">Text Extraction Strategy</div>
+                <div class="metric-value" id="meta-ocr">Native Text</div>
               </div>
             </div>
 
-            <!-- Key Metrics -->
-            <div class="result-meta-grid">
-              <div class="meta-box">
-                <div class="meta-box-label">Confidence</div>
-                <div class="meta-box-value" id="meta-confidence" style="color: var(--accent-cyan);">98%</div>
-              </div>
-              <div class="meta-box">
-                <div class="meta-box-label">Page Count</div>
-                <div class="meta-box-value" id="meta-pages">1 page</div>
-              </div>
-              <div class="meta-box">
-                <div class="meta-box-label">Duration</div>
-                <div class="meta-box-value" id="meta-time">45 ms</div>
-              </div>
-              <div class="meta-box">
-                <div class="meta-box-label">Text Strategy</div>
-                <div class="meta-box-value" id="meta-ocr">Native</div>
-              </div>
-            </div>
-
-            <!-- Tabs -->
-            <div class="tabs">
-              <button class="tab-btn active" data-tab="tab-validation" id="tab-btn-val">Financial Validations</button>
-              <button class="tab-btn" data-tab="tab-fields" id="tab-btn-fields">Extracted Fields &amp; Evidence</button>
-              <button class="tab-btn" data-tab="tab-tables" id="tab-btn-tables">Tables &amp; Line Items</button>
-              <button class="tab-btn" data-tab="tab-raw-json" id="tab-btn-json">Raw JSON</button>
+            <!-- Tabs Navigation -->
+            <div class="tabs-container">
+              <button class="tab-nav-btn active" data-tab="tab-validation" id="tab-btn-val">Financial Validations</button>
+              <button class="tab-nav-btn" data-tab="tab-fields" id="tab-btn-fields">Extracted Fields &amp; Evidence</button>
+              <button class="tab-nav-btn" data-tab="tab-tables" id="tab-btn-tables">Tables &amp; Line Items</button>
+              <button class="tab-nav-btn" data-tab="tab-raw-json" id="tab-btn-json">Raw JSON</button>
             </div>
 
             <!-- Tab 1: Financial Validations -->
-            <div class="tab-content active" id="tab-validation"></div>
+            <div class="tab-pane active" id="tab-validation"></div>
 
-            <!-- Tab 2: Extracted Fields & Evidence -->
-            <div class="tab-content" id="tab-fields"></div>
+            <!-- Tab 2: Extracted Fields -->
+            <div class="tab-pane" id="tab-fields"></div>
 
-            <!-- Tab 3: Tables & Line Items -->
-            <div class="tab-content" id="tab-tables"></div>
+            <!-- Tab 3: Tables -->
+            <div class="tab-pane" id="tab-tables"></div>
 
             <!-- Tab 4: Raw JSON -->
-            <div class="tab-content" id="tab-raw-json">
-              <div class="code-container">
-                <button class="btn-copy" id="btn-copy-json">Copy JSON</button>
-                <pre><code id="raw-json-pre"></code></pre>
+            <div class="tab-pane" id="tab-raw-json">
+              <div class="code-viewer-container">
+                <button class="btn-copy-code" id="btn-copy-json">Copy JSON</button>
+                <pre><code id="raw-json-pre" class="json-code-block"></code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Processed Documents Table Section -->
+        <section class="table-card" id="table-section">
+          <div class="table-card-header">
+            <div class="table-title-group">
+              <div class="table-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <div class="table-heading">
+                <h3>Processed Documents</h3>
+                <p>View and analyze your processed documents</p>
               </div>
             </div>
 
-          </div>
-        </div>
-
-        <!-- Dashboard Document List Card -->
-        <div class="card" id="dashboard-card">
-          <div class="card-header">
-            <h2 class="card-title">🗂️ Processed Documents Dashboard</h2>
-            <div style="display:flex; gap: 0.5rem; align-items: center;">
-              <input type="text" id="search-docs" placeholder="Search documents..." class="search-input">
-              <button class="nav-btn" id="btn-refresh-docs" style="cursor: pointer;">🔄 Refresh</button>
+            <!-- Search & Filter Controls -->
+            <div class="table-controls">
+              <div class="search-table-input-wrap">
+                <svg class="search-table-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-docs" class="search-table-input" placeholder="Search documents...">
+              </div>
+              <button class="btn-secondary" id="btn-filter-docs">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                <span>Filter</span>
+              </button>
+              <button class="btn-secondary btn-refresh" id="btn-refresh-docs">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                <span>Refresh</span>
+              </button>
             </div>
           </div>
-          
+
+          <!-- Modern Responsive Data Table -->
           <div class="table-responsive">
-            <table class="data-table" id="doc-table">
+            <table class="modern-table" id="doc-table">
               <thead>
                 <tr>
+                  <th style="width: 40px;">#</th>
                   <th>Document Name</th>
                   <th>Category</th>
                   <th>Status</th>
                   <th>Confidence</th>
-                  <th>Pages</th>
-                  <th>Processed Time</th>
+                  <th>Processed At</th>
+                  <th style="text-align: right;">Actions</th>
                 </tr>
               </thead>
               <tbody id="doc-table-body">
                 <tr>
-                  <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">
-                    Loading dashboard records...
+                  <td colspan="7" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+                    Loading records from database...
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
+        </section>
 
-      </section>
+      </main>
 
     </div>
-  </main>
+
+  </div>
 
   <!-- App Script -->
   <script src="/static/js/app.js"></script>
